@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="cv6CoreFaAnimation" edit_format="checkbox" data_type="array" advanced="1">
+    <default_value>{"fa-spin":true,"fa-pulse":true}</default_value>
+    <edit_format_params>fa-spin={{ phrase('cv6_fa_fa_spin') }}
+fa-pulse={{ phrase('cv6_fa_fa_pulse') }}</edit_format_params>
+    <sub_options>fa-spin
+fa-pulse</sub_options>
+    <relation group_id="cv6Core" display_order="130"/>
+    <relation group_id="debug" display_order="3652"/>
+  </option>
+  <option option_id="cv6CoreFaRotation" edit_format="checkbox" data_type="array" advanced="1">
+    <default_value>{"fa-rotate-90":true,"fa-rotate-180":true,"fa-rotate-270":true,"fa-flip-vertical":true,"fa-flip-horizontal":true}</default_value>
+    <edit_format_params>fa-rotate-90={{ phrase('cv6_fa_fa_rotate_90') }}
+fa-rotate-180={{ phrase('cv6_fa_fa_rotate_180') }}
+fa-rotate-270={{ phrase('cv6_fa_fa_rotate_270') }}
+fa-flip-vertical={{ phrase('cv6_fa_fa_flip_vertical') }}
+fa-flip-horizontal={{ phrase('cv6_fa_fa_flip_horizontal') }}</edit_format_params>
+    <sub_options>fa-rotate-90
+fa-rotate-180
+fa-rotate-270
+fa-flip-vertical
+fa-flip-horizontal</sub_options>
+    <relation group_id="cv6Core" display_order="120"/>
+    <relation group_id="debug" display_order="3651"/>
+  </option>
+  <option option_id="cv6CoreFaStyle" edit_format="checkbox" data_type="array" advanced="1">
+    <default_value>{"fal":true,"far":true,"fas":true,"fad":true,"fab":true}</default_value>
+    <edit_format_params>fal={{ phrase('cv6_fa_fal') }}
+far={{ phrase('cv6_fa_far') }}
+fas={{ phrase('cv6_fa_fas') }}
+fad={{ phrase('cv6_fa_fad') }}
+fab={{ phrase('cv6_fa_fab') }}</edit_format_params>
+    <sub_options>fal
+far
+fas
+fad
+fab</sub_options>
+    <relation group_id="cv6Core" display_order="110"/>
+    <relation group_id="debug" display_order="3650"/>
+  </option>
+  <option option_id="cv6CoreImageSample" edit_format="template" data_type="string" advanced="1">
+    <default_value></default_value>
+    <edit_format_params>cv6_options_template_asset</edit_format_params>
+    <relation group_id="debug" display_order="3601"/>
+  </option>
+  <option option_id="cv6IconSample" edit_format="template" data_type="string" advanced="1">
+    <default_value>fa-check</default_value>
+    <edit_format_params>template=cv6_options_template_icon
+rotation=1
+animation=1</edit_format_params>
+    <relation group_id="debug" display_order="3600"/>
+  </option>
+  <option option_id="cv6LetterRegExp" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>[a-zA-Z]</default_value>
+    <relation group_id="debug" display_order="3699"/>
+  </option>
+  <option option_id="cv6MarkEmptyLetter" edit_format="onoff" data_type="boolean" advanced="1">
+    <default_value>1</default_value>
+    <relation group_id="cv6Core" display_order="500"/>
+    <relation group_id="cv6LetterIndex" display_order="10"/>
+    <relation group_id="nodeList" display_order="1500"/>
+  </option>
+  <option option_id="cv6MinimumContent" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>50</default_value>
+    <edit_format_params>min=0
+max=1000000000</edit_format_params>
+    <relation group_id="cv6LetterIndex" display_order="20"/>
+  </option>
+  <option option_id="cv6ShowIconHelper" edit_format="onoff" data_type="boolean" advanced="1">
+    <default_value>1</default_value>
+    <relation group_id="acp" display_order="600"/>
+    <relation group_id="cv6Core" display_order="101"/>
+  </option>
+  <option option_id="cv6ShowNumberTab" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"1","character":"#"}</default_value>
+    <edit_format_params>onoff=enabled
+value=character
+type=textbox
+min=1
+placeholder={{ phrase('cv6_number_character') }}
+default=#</edit_format_params>
+    <sub_options>enabled
+character</sub_options>
+    <relation group_id="cv6LetterIndex" display_order="110"/>
+    <relation group_id="nodeList" display_order="1501"/>
+  </option>
+  <option option_id="cv6ShowOthersTab" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"0","character":"#"}</default_value>
+    <edit_format_params>onoff=enabled
+value=character
+type=textbox
+min=1
+placeholder={{ phrase('cv6_other_character') }}
+default=?</edit_format_params>
+    <sub_options>enabled
+character</sub_options>
+    <relation group_id="cv6LetterIndex" display_order="120"/>
+    <relation group_id="nodeList" display_order="1502"/>
+  </option>
+</options>

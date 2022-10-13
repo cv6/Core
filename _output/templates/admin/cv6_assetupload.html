@@ -1,0 +1,27 @@
+<xf:macro name="cv6_assetuploadrow" 
+    arg-name="!" 
+    arg-asset="!"
+    arg-label="" 
+    arg-rowclass="" 
+    arg-hint="" 
+    arg-explain=""
+    arg-value="" 
+    arg-class=""
+    arg-placeholder="path/to/sample.svg">
+
+    <xf:js src="cv6/core/asset.js" min="1" addon="cv6/Core" />
+    <xf:css src="cv6_core.less" />
+
+    <xf:assetuploadrow 
+        name="{$name}" 
+        asset="{$asset}" 
+        rowclass="{$rowclass}"
+        label="{$label}"
+        hint="{$hint}"
+        value="{$value}" 
+        explain="{$explain|raw}" 
+        placeholder="{$placeholder}"
+        class="cv6--asset-imagepreview {$class}" 
+        data-xf-init="cv6AssetImage" />
+
+</xf:macro>

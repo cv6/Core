@@ -1,0 +1,13 @@
+{
+    "group_name": "cv6Indexable",
+    "title": "hover tab text color",
+    "description": "",
+    "property_type": "value",
+    "css_components": [],
+    "value_type": "color",
+    "value_parameters": "",
+    "depends_on": "",
+    "value_group": "",
+    "property_value": "@xf-linkHoverColor",
+    "display_order": 45
+}

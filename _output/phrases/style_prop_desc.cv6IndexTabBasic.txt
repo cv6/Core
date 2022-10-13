@@ -1,0 +1,2 @@
+This defines the basic style for the letter tabs. The Seetings above modifies this for the special states.
+This is "inactive" state.

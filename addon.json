@@ -1,0 +1,23 @@
+{
+    "legacy_addon_id": "",
+    "title": "[cv6] - Core Library",
+    "description": "",
+    "version_id": 1010150,
+    "version_string": "1.1.1 Release Candidate",
+    "dev": "Hoffi",
+    "dev_url": "https://xenforo.com/community/members/hoffi.214/",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": {
+        "XF": [
+            2020010,
+            "XenForo 2.2.0+"
+        ],
+        "php": [
+            "7.2.0",
+            "PHP 7.2.0+"
+        ]
+    },
+    "icon": "logo-cv6.png"
+}

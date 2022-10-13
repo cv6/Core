@@ -1,0 +1,14 @@
+{
+    "edit_format": "onoff",
+    "edit_format_params": "",
+    "data_type": "boolean",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "1",
+    "relations": {
+        "acp": 600,
+        "cv6Core": 101
+    }
+}

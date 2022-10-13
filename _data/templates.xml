@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="cv6_assetupload" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_assetuploadrow" 
+    arg-name="!" 
+    arg-asset="!"
+    arg-label="" 
+    arg-rowclass="" 
+    arg-hint="" 
+    arg-explain=""
+    arg-value="" 
+    arg-class=""
+    arg-placeholder="path/to/sample.svg">
+
+    <xf:js src="cv6/core/asset.js" min="1" addon="cv6/Core" />
+    <xf:css src="cv6_core.less" />
+
+    <xf:assetuploadrow 
+        name="{$name}" 
+        asset="{$asset}" 
+        rowclass="{$rowclass}"
+        label="{$label}"
+        hint="{$hint}"
+        value="{$value}" 
+        explain="{$explain|raw}" 
+        placeholder="{$placeholder}"
+        class="cv6--asset-imagepreview {$class}" 
+        data-xf-init="cv6AssetImage" />
+
+</xf:macro>]]></template>
+  <template type="admin" title="cv6_core.less" version_id="1000070" version_string="1.0.0"><![CDATA[.cv6-iconpreview {
+	width: 30px;
+	.m-transition();
+	&:hover {
+		 transform: scale(1.8);
+	}
+}
+
+.cv6-loading {
+	color: @xf-textColorMuted;
+}
+
+.tabPanes.cv6-tabPanes {
+	li {
+		cursor: pointer;
+		.menu-linkRow.is-active {
+			font-weight: 700;
+			&:after {
+				.m-faBase();
+				.m-faContent(@fa-var-check);
+			}
+		}
+	}
+}
+
+.cv6--asset-imagepreview {
+	.m-transition();
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	&:focus {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+	&.cv6-noimg {
+		.m-transition();
+		background-size: 0;
+	}
+}
+]]></template>
+  <template type="admin" title="cv6_fa_icon" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_inputIcon"
+			arg-target="!"
+			arg-name="!" 
+			arg-label=""
+			arg-rowclass=""
+			arg-hint=""
+			arg-explain=""
+			arg-value="" 
+			arg-stylechooser="{{ ['style'] }}"
+			arg-placeholder="fa-..." 
+			arg-readonly=""
+			arg-maxlength="100"
+			arg-dir="ltr"
+>
+	<xf:js src="cv6/core/icon.js" min="1" addon="cv6/Core" />
+	<xf:css src="cv6_core.less" />
+	<xf:set var="$postField">
+		<xf:if is="$xf.options.cv6ShowIconHelper && $stylechooser|count > 0">
+			<xf:if contentcheck="true">
+				<span class='inputGroup-text'>
+					<span class="menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true">{{ phrase('cv6_fa_format') }}</span>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h4 class="menu-tabHeader tabs" data-xf-init="tabs" role="tablist">
+								<i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
+								<span class="hScroller" data-xf-init="h-scroller">
+									<span class="hScroller-scroll">
+										<xf:if is="in_array('style',$stylechooser)">
+											<a class="tabs-tab is-active" role="tab" aria-controls="{{ unique_id('accountMenu') }}">{{ phrase('cv6_fa_style') }}</a>
+										</xf:if>
+										<xf:if is="in_array('animation',$stylechooser)">
+											<a class="tabs-tab" role="tab">{{ phrase('cv6_fa_animation') }}</a>
+										</xf:if>
+										<xf:if is="in_array('rotation',$stylechooser)">
+											<a class="tabs-tab" role="tab">{{ phrase('cv6_fa_rotation') }}</a>
+										</xf:if>
+									</span>
+								</span>
+								<i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+							</h4>
+
+							<ul class="tabPanes cv6-tabPanes" 
+								data-xf-init="cv6CheckIconStyle"
+								data-icon=".cv6-iconpreview--{$target}"
+								data-target=".js-cv6-iconclasses--{$target}"
+							>
+								<xf:contentcheck>
+									<xf:set var="$styles" value="{$value|split(' ')}" />
+									<xf:if is="in_array('style',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaStyle" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkStyle" value="1" />
+													</xf:if>
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li class="is-active" role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkStyle ? '' : ' is-active' }}" data-class="_default">{{ phrase('cv6_icon_style_based') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+									<xf:if is="in_array('animation',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaAnimation" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkAni" value="1" />
+													</xf:if>													
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkAni ? '' : ' is-active' }}" data-class="">{{ phrase('none') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+									<xf:if is="in_array('rotation',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaRotation" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>	
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkRoti" value="1" />
+													</xf:if>
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkRoti ? '' : ' is-active' }}" data-class="">{{ phrase('none') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+								</xf:contentcheck>
+							</ul>
+						</div>
+					</div>
+				</span>
+			</xf:if>
+		</xf:if>
+	</xf:set>
+	<xf:set var="$preField">
+		<span class='inputGroup-text'><i class='far {$value} cv6-iconpreview--{$target} cv6-iconpreview'></i></span>
+	</xf:set>
+
+	<xf:textboxrow 
+		rowclass="{$rowclass}"
+		class="js-cv6-iconclasses--{$target}"
+		label="{$label}"
+		hint="{$hint}"
+		explain="{$explain|raw}"
+		name="{$name}" 
+		value="{$value}" 
+		placeholder="{$placeholder}" 
+		initialhtml = "<div class='inputGroup inputGroup--joined'>{$preField|raw}"
+		html="{$postField|raw}</div>"
+		data-xf-init="cv6ChangeIcon"
+		data-target=".cv6-iconpreview--{$target}"
+		readonly="{$readonly}"
+		maxlength="{$maxlength}"
+		dir="{$dir}"
+	/>
+</xf:macro>]]></template>
+  <template type="admin" title="cv6_options_icon" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_fa_icon::cv6_inputIcon" arg-target="optionDefaultIcon" 
+	arg-name="{$inputName}" 
+	arg-label="{$option.title}"
+	arg-hint="{$hintHtml}"
+	arg-explain="{$explainHtml}"
+	arg-rowclass="{$rowClass}"
+    arg-value="{$option.option_value}" 
+	arg-stylechooser="{{ ['style','animation','rotation'] }}" 
+ />]]></template>
+  <template type="admin" title="cv6_options_template_asset" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_assetupload::cv6_assetuploadrow" arg-target="optionAsset-{$option.option_id}" 
+    arg-name="{$inputName}" arg-value="{{ $option.option_value ?: $option.default_value }}" 
+    arg-label="{$option.title}" 
+    arg-hint="{$hintHtml}" 
+    arg-explain="{$explainHtml}" 
+    arg-rowclass="{$rowClass}"
+    arg-asset="cv6coreoptions"
+
+/>
+<input type="hidden" name="options_listed[]" value="{$option.option_id}">]]></template>
+  <template type="admin" title="cv6_options_template_icon" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_fa_icon::cv6_inputIcon" arg-target="optionIcon-{$option.option_id}" 
+    arg-name="{$inputName}" arg-value="{{ $option.option_value ?: $option.default_value }}" 
+    arg-label="{$option.title}" 
+    arg-hint="{$hintHtml}" 
+    arg-explain="{$explainHtml}" 
+    arg-rowclass="{$rowClass}"
+    arg-stylechooser="{{ ['style', $formatParams.rotation == 1 ? 'rotation' : '' ,  $formatParams.animation == 1 ? 'animation' : ''] }}"
+/>
+<input type="hidden" name="options_listed[]" value="{$option.option_id}">]]></template>
+  <template type="admin" title="cv6_style_fa_icon" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_inputIcon"
+			arg-target="!"
+			arg-name="!" 
+			arg-label=""
+			arg-rowclass=""
+			arg-hint=""
+			arg-explain=""
+			arg-value="" 
+			arg-stylechooser="{{ ['style','animation','rotation'] }}"
+			arg-placeholder="fa-..." 
+
+>
+	<xf:js src="cv6/admin/icon.js" min="1" addon="cv6/Core" />
+	<xf:css src="cv6_core.less" />
+	<xf:set var="$postField">
+		<xf:if is="$xf.options.cv6ShowIconHelper && $stylechooser != 0">
+			<span class='inputGroup-text'>
+				<span class="menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true">{{ phrase('cv6_fa_format') }}</span>
+				<div class="menu" data-menu="menu" aria-hidden="true">
+					<div class="menu-content">
+						<h4 class="menu-tabHeader tabs" data-xf-init="tabs" role="tablist">
+							<span class="hScroller" data-xf-init="h-scroller">
+								<span class="hScroller-scroll">
+									<xf:if is="in_array('style',$stylechooser)">
+										<a class="tabs-tab is-active" role="tab" tabindex="0" aria-controls="{{ unique_id('accountMenu') }}">{{ phrase('cv6_fa_style') }}</a>
+									</xf:if>
+									<xf:if is="in_array('animation',$stylechooser)">
+										<a class="tabs-tab" role="tab" tabindex="1">{{ phrase('cv6_fa_animation') }}</a>
+									</xf:if>
+									<xf:if is="in_array('rotation',$stylechooser)">
+										<a class="tabs-tab" role="tab" tabindex="2">{{ phrase('cv6_fa_rotation') }}</a>
+									</xf:if>
+								</span>
+							</span>
+							<i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
+							<i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+						</h4>
+
+						<ul class="tabPanes cv6-tabPanes" 
+							data-xf-init="cv6CheckIconStyle"
+							data-icon=".cv6-iconpreview--{$target}"
+							data-target=".js-cv6-iconclasses"
+						>
+							<xf:if is="in_array('style',$stylechooser)">
+								<li class="is-active" role="tabpanel" aria-expanded="true">
+									<span class="menu-linkRow" data-class="fal">{{ phrase('cv6_fa_light') }}</span>
+									<span class="menu-linkRow" data-class="far">{{ phrase('cv6_fa_regular') }}</span>
+									<span class="menu-linkRow is-active" data-class="fas">{{ phrase('cv6_fa_solid') }}</span>
+									<span class="menu-linkRow" data-class="fad">{{ phrase('cv6_fa_duotone') }}</span>
+									<span class="menu-linkRow" data-class="fab">{{ phrase('cv6_fa_brand') }}</span>
+								</li>
+							</xf:if>
+							<xf:if is="in_array('animation',$stylechooser)">
+								<li role="tabpanel" aria-expanded="true">
+									<span class="menu-linkRow is-active" data-class="">{{ phrase('none') }}</span>
+									<span class="menu-linkRow" data-class="fa-spin">{{ phrase('cv6_fa_spin') }}</span>
+									<span class="menu-linkRow" data-class="fa-pulse">{{ phrase('cv6_fa_pulse') }}</span>
+								</li>
+							</xf:if>
+							<xf:if is="in_array('rotation',$stylechooser)">
+								<li role="tabpanel" aria-expanded="true">
+									<span class="menu-linkRow is-active" data-class="">{{ phrase('none') }}</span>
+									<span class="menu-linkRow" data-class="fa-rotate-90">{{ phrase('cv6_fa_90') }}</span>
+									<span class="menu-linkRow" data-class="fa-rotate-180">{{ phrase('cv6_fa_180') }}</span>
+									<span class="menu-linkRow" data-class="fa-rotate-270">{{ phrase('cv6_fa_270') }}</span>
+									<span class="menu-linkRow" data-class="fa-flip-horizontal">{{ phrase('cv6_fa_flip_vertical') }}</span>
+									<span class="menu-linkRow" data-class="fa-flip-vertical">{{ phrase('cv6_fa_flip_horizontal') }}</span>
+								</li>
+							</xf:if>
+						</ul>
+					</div>
+				</div>
+			</span>
+		</xf:if>
+	</xf:set>
+	<xf:set var="$preField">
+		<span class='inputGroup-text'><i class='far {$value} cv6-iconpreview--{$target} cv6-iconpreview'></i></span>
+	</xf:set>
+		<xf:textboxrow 
+			rowclass="{$rowclass}"
+			class="js-cv6-iconclasses"
+			label="{$label}"
+			hint="{$hint}"
+			explain="{$explain}"
+			name="{$name}" 
+			value="{$value}" 
+			placeholder="{$placeholder}" 
+			initialhtml = "<div class='inputGroup inputGroup--joined'>{$preField|raw}"
+			html="{$postField|raw}</div>"
+			data-xf-init="cv6ChangeIcon"
+			data-target=".cv6-iconpreview--{$target}"
+		/>
+</xf:macro>]]></template>
+  <template type="admin" title="cv6_style_template_icon" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:macro name="cv6_fa_icon::cv6_inputIcon" 
+    arg-target="cv6-property-{$property.property_id}" 
+    arg-rowclass="{$rowClass}"
+    arg-name="{$formBaseKey}"
+    arg-label="{$titleHtml}" 
+    arg-hint="{$hintHtml}"
+    arg-explain="{$property.description}" 
+    arg-value="{$property.property_value}"
+    arg-stylechooser="{{ [ $valueOptions.style == 1 ? 'style' : '', $valueOptions.rotation == 1 ? 'rotation' : '' ,  $valueOptions.animation == 1 ? 'animation' : ''] }}"
+/>]]></template>
+  <template type="public" title="cv6_fa.less" version_id="1000070" version_string="1.0.0"><![CDATA[.cv6-IconVar(@faclass) 
+{
+    @cv6-short: replace(extract(@faclass,1), 'fa-', '');
+    @cv6-iconVar: "fa-var-@{cv6-short}";
+    .m-faContent(@@cv6-iconVar);
+}
+
+.cv6-DefaultOpacity()
+{
+    opacity: @xf-cv6DefaultOpacity  / 100;
+}]]></template>
+  <template type="public" title="cv6_index_filter" version_id="1000170" version_string="1.0.1"><![CDATA[<xf:macro name="letters" arg-index="!" arg-class="{{ false }}" arg-route="!" arg-params="{{ [] }}" arg-number="0">
+    <div class="block-cv6-letterindex hScroller" data-xf-init="h-scroller" data-auto-scroll=".active">
+        <span class="hScroller-scroll">
+            <ul class="cv6-letterindex {$class}">
+                <xf:if is="$number">
+                    <li>
+                        <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}"
+                            class="{{ $index.letter == '0-9' ? 'active' : ''}}">
+                            #
+                        </a>
+                    </li>
+                </xf:if>
+                <xf:foreach loop="$index.list" value="$letter">
+                    <li>
+                        <a href="{{ link($route, $params, {'letter':$letter}) }}"
+                            class="{{ $letter == $index.letter ?'active':''}}">{$letter}</a>
+                    </li>
+                </xf:foreach>
+                <li>
+                    <a href="{{ link($route,{$params}, {'letter':'-'}) }}" title="{{ phrase('cv6_remove_filter') }}"
+                        data-xf-init="tooltip">
+                        <xf:fa icon="fa-ban" />
+                    </a>
+                </li>
+            </ul>
+        </span>
+    </div>
+</xf:macro>]]></template>
+  <template type="public" title="cv6_letterindex" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[<xf:macro name="letters" 
+    arg-index="!" 
+    arg-class="{{ false }}" 
+    arg-route="!" 
+    arg-params="{{ [] }}" 
+    arg-other="0" arg-othersign="{{ phrase('cv6_character_other') }}"
+    arg-number="0" arg-numbersign="{{ phrase('cv6_character_number') }}"
+>
+    <xf:css src="cv6_letterindex.less" />
+    <div class="block-cv6-letterindex hScroller" data-xf-init="h-scroller" data-auto-scroll=".cv6-letterindex .active">
+        <span class="hScroller-scroll">
+            <ul class="cv6-letterindex {$class}">
+                <li title="{{ phrase('cv6_remove_filter') }}" data-xf-init="tooltip"
+                    class="remove{{ !$index.letter ? ' active' : ''}}" >
+                    <a href="{{ link($route,{$params}, {'letter':'-'}) }}">
+                        <xf:fa icon="fa-ban" />
+                    </a>
+                </li>
+                <xf:if is="$number">
+                    <li
+                        class="{{ $index.letter == '0-9' ? 'active' : '' }}{{ ($index.counter.0 > 0 || !$index.counter) ? '' : ' no-result'}}">
+                        <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}">{$numbersign}</a>
+                    </li>
+                </xf:if>
+                <xf:foreach loop="$index.list" value="$letter">
+                    <li 
+                        class="{{ $letter == $index.letter ? 'active' : '' }} {{ ($index.counter.{$letter} > 0 || !$index.counter ) ? '' : ' no-result'}}">
+                        <a href="{{ link($route, $params, {'letter':$letter}) }}">{$letter}</a>
+                    </li>
+                </xf:foreach>
+                <xf:if is="$other">
+                    <li
+                        class="{{ $index.letter == '_' ? 'active' : '' }}{{ ($index.counter._ > 0 || !$index.counter) ? '' : ' no-result'}}">
+                        <a href="{{ link($route,{$params}, {'letter':'_'}) }}">{$othersign}</a>
+                    </li>
+                </xf:if>
+            </ul>
+        </span>
+    </div>
+</xf:macro>
+
+<xf:macro name="filter"
+    arg-letter="!"
+    arg-route="!"
+    arg-params="{{ [] }}" 
+>
+    <xf:if contentcheck="true">
+        <ul class="filterBar-filters">
+            <xf:contentcheck>
+                <li><a href="{{ link($route, $params) }}" class="filterBar-filterToggle"
+                    data-xf-init="tooltip" title="{{ phrase('remove_this_filter')|for_attr }}">
+                    <span class="filterBar-filterToggle-label">{{ phrase('cv6_letter_filter:') }}</span>
+                    {$letter}</a>
+                </li>
+            </xf:contentcheck>
+        </ul>
+    </xf:if>
+</xf:macro>]]></template>
+  <template type="public" title="cv6_letterindex.less" version_id="1010050" version_string="1.1.0 Release Candidate"><![CDATA[.block-cv6-letterindex {
+    margin-bottom: -1px;
+    .cv6-letterindex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        width: 100%;
+        .m-listPlain();
+        padding-left: @xf-borderRadiusLarge;
+        padding-right: @xf-borderRadiusLarge;
+
+        li {
+            .xf-cv6IndexTabBasic();
+
+            display: inline-block;
+            flex-grow: 1;
+            overflow: hidden;
+            height: calc(@xf-cv6IndexTabSize * 0.85);
+            width: @xf-cv6IndexTabSize;
+            min-width: max-content;
+            
+            .m-transition();
+
+            &.remove {
+                height: @xf-cv6IndexTabSize;
+            }
+                
+            &.no-result {
+                // cursor: wait;
+                color: @xf-cv6IndexTabTextNoResult;
+                background-color: @xf-cv6IndexTabBgNoResult;
+                &:hover {
+                    color: @xf-cv6IndexTabTextNoResult;
+                    a {
+                        cursor: default;
+                    }
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
+                background-color: @xf-cv6IndexTabBgActive;
+                color: @xf-cv6IndexTabTextHover;
+                height: @xf-cv6IndexTabSize;
+            }
+
+            &.active {
+                background-color: @xf-cv6IndexTabBgActive;
+                border-bottom-color: @xf-cv6IndexTabBgActive;
+                color: @xf-cv6IndexTabTextActive;
+                height: @xf-cv6IndexTabSize;
+                font-weight: @xf-fontWeightHeavy;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+            }
+        }
+    }
+
+    .hScroller-action {
+        .m-hScrollerActionColorVariation(xf-default(@xf-pageBg, transparent),
+            xf-default(@xf-standaloneTab--color, ~""),
+            xf-default(@xf-standaloneTabSelected--color, ~""));
+    }
+}]]></template>
+</templates>

@@ -1,0 +1,13 @@
+{
+    "group_name": "cv6Core",
+    "title": "Default opacity",
+    "description": "when used opacy for less seen items, I alwas use this to have a smoother look.<br />\nSet to 100 to have no opacity.",
+    "property_type": "value",
+    "css_components": [],
+    "value_type": "number",
+    "value_parameters": "min=0\nmax=100",
+    "depends_on": "",
+    "value_group": "",
+    "property_value": "40",
+    "display_order": 1
+}

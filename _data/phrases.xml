@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="cv6_fa_animation" version_id="1000070" version_string="1.0.0"><![CDATA[Animation]]></phrase>
+  <phrase title="cv6_fa_fa_flip_horizontal" version_id="1000070" version_string="1.0.0"><![CDATA[Flip horizontal]]></phrase>
+  <phrase title="cv6_fa_fa_flip_vertical" version_id="1000070" version_string="1.0.0"><![CDATA[Flip vertical]]></phrase>
+  <phrase title="cv6_fa_fa_pulse" version_id="1000070" version_string="1.0.0"><![CDATA[Pulse]]></phrase>
+  <phrase title="cv6_fa_fa_rotate_180" version_id="1000070" version_string="1.0.0"><![CDATA[180°]]></phrase>
+  <phrase title="cv6_fa_fa_rotate_270" version_id="1000070" version_string="1.0.0"><![CDATA[270°]]></phrase>
+  <phrase title="cv6_fa_fa_rotate_90" version_id="1000070" version_string="1.0.0"><![CDATA[90°]]></phrase>
+  <phrase title="cv6_fa_fa_spin" version_id="1000070" version_string="1.0.0"><![CDATA[Spinning]]></phrase>
+  <phrase title="cv6_fa_fab" version_id="1000070" version_string="1.0.0"><![CDATA[Brand Icons]]></phrase>
+  <phrase title="cv6_fa_fad" version_id="1000070" version_string="1.0.0"><![CDATA[Duotone]]></phrase>
+  <phrase title="cv6_fa_fal" version_id="1000070" version_string="1.0.0"><![CDATA[Light]]></phrase>
+  <phrase title="cv6_fa_far" version_id="1000070" version_string="1.0.0"><![CDATA[Regular]]></phrase>
+  <phrase title="cv6_fa_fas" version_id="1000070" version_string="1.0.0"><![CDATA[Solid]]></phrase>
+  <phrase title="cv6_fa_format" version_id="1000070" version_string="1.0.0"><![CDATA[Layout]]></phrase>
+  <phrase title="cv6_fa_rotation" version_id="1000070" version_string="1.0.0"><![CDATA[Rotation]]></phrase>
+  <phrase title="cv6_fa_solid" version_id="1000070" version_string="1.0.0"><![CDATA[Solid]]></phrase>
+  <phrase title="cv6_fa_style" version_id="1000070" version_string="1.0.0"><![CDATA[Style]]></phrase>
+  <phrase title="cv6_icon_style_based" version_id="1000070" version_string="1.0.0"><![CDATA[None (Style based)]]></phrase>
+  <phrase title="cv6_letter_filter" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[Starts with]]></phrase>
+  <phrase title="cv6_remove_filter" version_id="1000170" version_string="1.0.1"><![CDATA[Remove index filter]]></phrase>
+  <phrase title="option.cv6CoreFaAnimation" version_id="1000070" version_string="1.0.0"><![CDATA[Icon animation]]></phrase>
+  <phrase title="option.cv6CoreFaRotation" version_id="1000070" version_string="1.0.0"><![CDATA[Icon rotation]]></phrase>
+  <phrase title="option.cv6CoreFaStyle" version_id="1000070" version_string="1.0.0"><![CDATA[Icon styles]]></phrase>
+  <phrase title="option.cv6CoreImageSample" version_id="1000070" version_string="1.0.0"><![CDATA[Asset Upload]]></phrase>
+  <phrase title="option.cv6IconSample" version_id="1000070" version_string="1.0.0"><![CDATA[FA icon]]></phrase>
+  <phrase title="option.cv6LetterRegExp" version_id="1010070" version_string="1.1.0"><![CDATA[Letter RegExp]]></phrase>
+  <phrase title="option.cv6MarkEmptyLetter" version_id="1010050" version_string="1.1.0 Release Candidate"><![CDATA[mark empty tabs]]></phrase>
+  <phrase title="option.cv6MinimumContent" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[Minimun item count]]></phrase>
+  <phrase title="option.cv6ShowIconHelper" version_id="1000070" version_string="1.0.0"><![CDATA[Display FA Icon helper]]></phrase>
+  <phrase title="option.cv6ShowNumberTab" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[Should a tab for numbers displayed?]]></phrase>
+  <phrase title="option.cv6ShowOthersTab" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[Should a others tab be displayed?]]></phrase>
+  <phrase title="option_explain.cv6CoreFaAnimation" version_id="1000070" version_string="1.0.0"><![CDATA[Used to identify the allowed animations for Font Awesome Icons]]></phrase>
+  <phrase title="option_explain.cv6CoreFaRotation" version_id="1000070" version_string="1.0.0"><![CDATA[Used to identify the allowed rotations for Font Awesome Icons]]></phrase>
+  <phrase title="option_explain.cv6CoreFaStyle" version_id="1000070" version_string="1.0.0"><![CDATA[Used to identify the allowed styles for Font Awesome Icons]]></phrase>
+  <phrase title="option_explain.cv6CoreImageSample" version_id="1000070" version_string="1.0.0"><![CDATA[just a sample]]></phrase>
+  <phrase title="option_explain.cv6IconSample" version_id="1000070" version_string="1.0.0"><![CDATA[at the end only a sample]]></phrase>
+  <phrase title="option_explain.cv6LetterRegExp" version_id="1010070" version_string="1.1.0"><![CDATA[Definition to identify the letters for the index]]></phrase>
+  <phrase title="option_explain.cv6MarkEmptyLetter" version_id="1010050" version_string="1.1.0 Release Candidate"><![CDATA[If you want to mark empty letters, activate this option. This will add one additional query to every page.]]></phrase>
+  <phrase title="option_explain.cv6MinimumContent" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[if in the content has less entries, the index is hidden.<br />
+set 0 to disable]]></phrase>
+  <phrase title="option_explain.cv6ShowIconHelper" version_id="1000070" version_string="1.0.0"><![CDATA[Enable to activate the FA Helper menu inside cv6 AddOns.]]></phrase>
+  <phrase title="option_explain.cv6ShowNumberTab" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[If you have threads starting with a number, they will displayed under this tab. If enabled, type the Character in the textfield, which should be shown on the tab. Default: <strong>#</strong>]]></phrase>
+  <phrase title="option_explain.cv6ShowOthersTab" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[If you have threads starting neither with a number nor a character, they will displayed under this tab. If enabled, type the Character in the textfield, which should be shown on the tab. Default: <strong>?</strong>]]></phrase>
+  <phrase title="option_group.cv6Core" version_id="1000070" version_string="1.0.0"><![CDATA[[cv6] Core]]></phrase>
+  <phrase title="option_group.cv6LetterIndex" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[[cv6] Letter Index]]></phrase>
+  <phrase title="option_group_description.cv6Core" version_id="1000070" version_string="1.0.0"><![CDATA[a few basic settings]]></phrase>
+  <phrase title="option_group_description.cv6LetterIndex" version_id="1010051" version_string="1.1.0 Release Candidate 1"><![CDATA[Options for the letter index tabs]]></phrase>
+  <phrase title="style_prop.cv6IndexTabBasic" version_id="1000170" version_string="1.0.1"><![CDATA[Basic Tab styling]]></phrase>
+  <phrase title="style_prop.cv6IndexTabBgActive" version_id="1000170" version_string="1.0.1"><![CDATA[active/hover tab background color]]></phrase>
+  <phrase title="style_prop.cv6IndexTabBgNoResult" version_id="1000170" version_string="1.0.1"><![CDATA[no result tab background color]]></phrase>
+  <phrase title="style_prop.cv6IndexTabSize" version_id="1000170" version_string="1.0.1"><![CDATA[Tab Size]]></phrase>
+  <phrase title="style_prop.cv6IndexTabTextActive" version_id="1000170" version_string="1.0.1"><![CDATA[active tab text color]]></phrase>
+  <phrase title="style_prop.cv6IndexTabTextHover" version_id="1000170" version_string="1.0.1"><![CDATA[hover tab text color]]></phrase>
+  <phrase title="style_prop.cv6IndexTabTextNoResult" version_id="1000170" version_string="1.0.1"><![CDATA[no result tab text color]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabBasic" version_id="1000170" version_string="1.0.1"><![CDATA[This defines the basic style for the letter tabs. The Seetings above modifies this for the special states.
+This is "inactive" state.]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabBgActive" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabBgNoResult" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabSize" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabTextActive" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabTextHover" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.cv6IndexTabTextNoResult" version_id="1000170" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="style_prop_group.cv6Core" version_id="1000070" version_string="1.0.0"><![CDATA[[cv6] Core Settings]]></phrase>
+  <phrase title="style_prop_group.cv6Indexable" version_id="1000170" version_string="1.0.1"><![CDATA[[cv6] Index styling]]></phrase>
+  <phrase title="style_prop_group_desc.cv6Core" version_id="1000070" version_string="1.0.0"><![CDATA[Some Settings that relates to more than one add-on]]></phrase>
+  <phrase title="style_prop_group_desc.cv6Indexable" version_id="1000170" version_string="1.0.1"><![CDATA[Here you can style your index tabs.]]></phrase>
+</phrases>

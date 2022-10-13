@@ -1,0 +1,40 @@
+.cv6-iconpreview {
+	width: 30px;
+	.m-transition();
+	&:hover {
+		 transform: scale(1.8);
+	}
+}
+
+.cv6-loading {
+	color: @xf-textColorMuted;
+}
+
+.tabPanes.cv6-tabPanes {
+	li {
+		cursor: pointer;
+		.menu-linkRow.is-active {
+			font-weight: 700;
+			&:after {
+				.m-faBase();
+				.m-faContent(@fa-var-check);
+			}
+		}
+	}
+}
+
+.cv6--asset-imagepreview {
+	.m-transition();
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	&:focus {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+	&.cv6-noimg {
+		.m-transition();
+		background-size: 0;
+	}
+}

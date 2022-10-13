@@ -1,0 +1,9 @@
+<xf:macro name="cv6_fa_icon::cv6_inputIcon" arg-target="optionIcon-{$option.option_id}" 
+    arg-name="{$inputName}" arg-value="{{ $option.option_value ?: $option.default_value }}" 
+    arg-label="{$option.title}" 
+    arg-hint="{$hintHtml}" 
+    arg-explain="{$explainHtml}" 
+    arg-rowclass="{$rowClass}"
+    arg-stylechooser="{{ ['style', $formatParams.rotation == 1 ? 'rotation' : '' ,  $formatParams.animation == 1 ? 'animation' : ''] }}"
+/>
+<input type="hidden" name="options_listed[]" value="{$option.option_id}">

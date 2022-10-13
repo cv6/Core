@@ -1,0 +1,129 @@
+<xf:macro name="cv6_inputIcon"
+			arg-target="!"
+			arg-name="!" 
+			arg-label=""
+			arg-rowclass=""
+			arg-hint=""
+			arg-explain=""
+			arg-value="" 
+			arg-stylechooser="{{ ['style'] }}"
+			arg-placeholder="fa-..." 
+			arg-readonly=""
+			arg-maxlength="100"
+			arg-dir="ltr"
+>
+	<xf:js src="cv6/core/icon.js" min="1" addon="cv6/Core" />
+	<xf:css src="cv6_core.less" />
+	<xf:set var="$postField">
+		<xf:if is="$xf.options.cv6ShowIconHelper && $stylechooser|count > 0">
+			<xf:if contentcheck="true">
+				<span class='inputGroup-text'>
+					<span class="menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true">{{ phrase('cv6_fa_format') }}</span>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h4 class="menu-tabHeader tabs" data-xf-init="tabs" role="tablist">
+								<i class="hScroller-action hScroller-action--end" aria-hidden="true"></i>
+								<span class="hScroller" data-xf-init="h-scroller">
+									<span class="hScroller-scroll">
+										<xf:if is="in_array('style',$stylechooser)">
+											<a class="tabs-tab is-active" role="tab" aria-controls="{{ unique_id('accountMenu') }}">{{ phrase('cv6_fa_style') }}</a>
+										</xf:if>
+										<xf:if is="in_array('animation',$stylechooser)">
+											<a class="tabs-tab" role="tab">{{ phrase('cv6_fa_animation') }}</a>
+										</xf:if>
+										<xf:if is="in_array('rotation',$stylechooser)">
+											<a class="tabs-tab" role="tab">{{ phrase('cv6_fa_rotation') }}</a>
+										</xf:if>
+									</span>
+								</span>
+								<i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+							</h4>
+
+							<ul class="tabPanes cv6-tabPanes" 
+								data-xf-init="cv6CheckIconStyle"
+								data-icon=".cv6-iconpreview--{$target}"
+								data-target=".js-cv6-iconclasses--{$target}"
+							>
+								<xf:contentcheck>
+									<xf:set var="$styles" value="{$value|split(' ')}" />
+									<xf:if is="in_array('style',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaStyle" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkStyle" value="1" />
+													</xf:if>
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li class="is-active" role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkStyle ? '' : ' is-active' }}" data-class="_default">{{ phrase('cv6_icon_style_based') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+									<xf:if is="in_array('animation',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaAnimation" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkAni" value="1" />
+													</xf:if>													
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkAni ? '' : ' is-active' }}" data-class="">{{ phrase('none') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+									<xf:if is="in_array('rotation',$stylechooser)">
+										<xf:set var="$items">
+											<xf:foreach loop="$xf.options.cv6CoreFaRotation" key="$class" value="$on">
+												<xf:if is="$on">
+													<xf:set var="$phrase">cv6_fa_{$class|replace('-','_')}</xf:set>
+													<span class="menu-linkRow{{ in_array($class,$styles) ? ' is-active' : '' }}" data-class="{$class}">{{ phrase_dynamic({$phrase}) }}</span>	
+													<xf:if is="in_array($class,$styles)">
+														<xf:set var="$checkRoti" value="1" />
+													</xf:if>
+												</xf:if>
+											</xf:foreach>
+										</xf:set>
+										<li role="tabpanel" aria-expanded="true">
+											<span class="menu-linkRow{{ $checkRoti ? '' : ' is-active' }}" data-class="">{{ phrase('none') }}</span>
+											{$items|raw}
+										</li>
+									</xf:if>
+								</xf:contentcheck>
+							</ul>
+						</div>
+					</div>
+				</span>
+			</xf:if>
+		</xf:if>
+	</xf:set>
+	<xf:set var="$preField">
+		<span class='inputGroup-text'><i class='far {$value} cv6-iconpreview--{$target} cv6-iconpreview'></i></span>
+	</xf:set>
+
+	<xf:textboxrow 
+		rowclass="{$rowclass}"
+		class="js-cv6-iconclasses--{$target}"
+		label="{$label}"
+		hint="{$hint}"
+		explain="{$explain|raw}"
+		name="{$name}" 
+		value="{$value}" 
+		placeholder="{$placeholder}" 
+		initialhtml = "<div class='inputGroup inputGroup--joined'>{$preField|raw}"
+		html="{$postField|raw}</div>"
+		data-xf-init="cv6ChangeIcon"
+		data-target=".cv6-iconpreview--{$target}"
+		readonly="{$readonly}"
+		maxlength="{$maxlength}"
+		dir="{$dir}"
+	/>
+</xf:macro>

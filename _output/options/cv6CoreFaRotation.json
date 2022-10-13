@@ -1,0 +1,20 @@
+{
+    "edit_format": "checkbox",
+    "edit_format_params": "fa-rotate-90={{ phrase('cv6_fa_fa_rotate_90') }}\nfa-rotate-180={{ phrase('cv6_fa_fa_rotate_180') }}\nfa-rotate-270={{ phrase('cv6_fa_fa_rotate_270') }}\nfa-flip-vertical={{ phrase('cv6_fa_fa_flip_vertical') }}\nfa-flip-horizontal={{ phrase('cv6_fa_fa_flip_horizontal') }}",
+    "data_type": "array",
+    "sub_options": [
+        "fa-rotate-90",
+        "fa-rotate-180",
+        "fa-rotate-270",
+        "fa-flip-vertical",
+        "fa-flip-horizontal"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "{\"fa-rotate-90\":true,\"fa-rotate-180\":true,\"fa-rotate-270\":true,\"fa-flip-vertical\":true,\"fa-flip-horizontal\":true}",
+    "relations": {
+        "cv6Core": 120,
+        "debug": 3651
+    }
+}

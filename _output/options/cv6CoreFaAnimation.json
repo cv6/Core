@@ -1,0 +1,17 @@
+{
+    "edit_format": "checkbox",
+    "edit_format_params": "fa-spin={{ phrase('cv6_fa_fa_spin') }}\nfa-pulse={{ phrase('cv6_fa_fa_pulse') }}",
+    "data_type": "array",
+    "sub_options": [
+        "fa-spin",
+        "fa-pulse"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "{\"fa-spin\":true,\"fa-pulse\":true}",
+    "relations": {
+        "cv6Core": 130,
+        "debug": 3652
+    }
+}

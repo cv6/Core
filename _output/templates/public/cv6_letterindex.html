@@ -1,0 +1,59 @@
+<xf:macro name="letters" 
+    arg-index="!" 
+    arg-class="{{ false }}" 
+    arg-route="!" 
+    arg-params="{{ [] }}" 
+    arg-other="0" arg-othersign="{{ phrase('cv6_character_other') }}"
+    arg-number="0" arg-numbersign="{{ phrase('cv6_character_number') }}"
+>
+    <xf:css src="cv6_letterindex.less" />
+    <div class="block-cv6-letterindex hScroller" data-xf-init="h-scroller" data-auto-scroll=".cv6-letterindex .active">
+        <span class="hScroller-scroll">
+            <ul class="cv6-letterindex {$class}">
+                <xf:if is="$xf.options.cv6RemoveTab">
+                    <li title="{{ phrase('cv6_remove_filter') }}" data-xf-init="tooltip" class="remove{{ !$index.letter ? ' active' : ''}}">
+                        <a href="{{ link($route,{$params}, {'letter':'-'}) }}">
+                            <xf:fa icon="fa-ban" />
+                        </a>
+                    </li>
+                </xf:if>
+                <xf:if is="$number">
+                    <li
+                        class="{{ $index.letter == '0-9' ? 'active' : '' }}{{ ($index.counter.0 > 0 || !$index.counter) ? '' : ' no-result'}}">
+                        <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}">{$numbersign}</a>
+                    </li>
+                </xf:if>
+                <xf:foreach loop="$index.list" value="$letter">
+                    <li 
+                        class="{{ $letter == $index.letter ? 'active' : '' }} {{ ($index.counter.{$letter} > 0 || !$index.counter ) ? '' : ' no-result'}}">
+                        <a href="{{ link($route, $params, {'letter':$letter}) }}">{$letter}</a>
+                    </li>
+                </xf:foreach>
+                <xf:if is="$other">
+                    <li
+                        class="{{ $index.letter == '_' ? 'active' : '' }}{{ ($index.counter._ > 0 || !$index.counter) ? '' : ' no-result'}}">
+                        <a href="{{ link($route,{$params}, {'letter':'_'}) }}">{$othersign}</a>
+                    </li>
+                </xf:if>
+            </ul>
+        </span>
+    </div>
+</xf:macro>
+
+<xf:macro name="filter"
+    arg-letter="!"
+    arg-route="!"
+    arg-params="{{ [] }}" 
+>
+    <xf:if contentcheck="true">
+        <ul class="filterBar-filters">
+            <xf:contentcheck>
+                <li><a href="{{ link($route, $params) }}" class="filterBar-filterToggle"
+                    data-xf-init="tooltip" title="{{ phrase('remove_this_filter')|for_attr }}">
+                    <span class="filterBar-filterToggle-label">{{ phrase('cv6_letter_filter:') }}</span>
+                    {$letter}</a>
+                </li>
+            </xf:contentcheck>
+        </ul>
+    </xf:if>
+</xf:macro>

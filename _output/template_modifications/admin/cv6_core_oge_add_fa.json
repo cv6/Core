@@ -1,0 +1,9 @@
+{
+    "template": "option_group_edit",
+    "description": "adds icon to options group",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:textboxrow name=\"icon\" value=\"{$group.icon}\"\n\t\t\t\tlabel=\"{{ phrase('icon') }}\" />",
+    "replace": "<xf:macro name=\"cv6_fa_icon::cv6_inputIcon\"\n\t\t\t\targ-name=\"icon\" \n\t\t\t\targ-value=\"{$group.icon}\"\n\t\t\t\targ-label=\"{{ phrase('icon') }}\"\n\t\t  \t\targ-target=\"option-group\"\n\t\t\t/>"
+}

@@ -1,0 +1,17 @@
+{
+    "edit_format": "onofftextbox",
+    "edit_format_params": "onoff=enabled\nvalue=character\ntype=textbox\nmin=1\nplaceholder={{ phrase('cv6_other_character') }}\ndefault=?",
+    "data_type": "array",
+    "sub_options": [
+        "enabled",
+        "character"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "{\"enabled\":\"0\",\"character\":\"#\"}",
+    "relations": {
+        "cv6LetterIndex": 120,
+        "nodeList": 1502
+    }
+}

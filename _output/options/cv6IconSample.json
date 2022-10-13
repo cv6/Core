@@ -1,0 +1,13 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "template=cv6_options_template_icon\nrotation=1\nanimation=1",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "fa-check",
+    "relations": {
+        "debug": 3600
+    }
+}

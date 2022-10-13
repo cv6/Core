@@ -1,0 +1,1 @@
+Here you can style your index tabs.

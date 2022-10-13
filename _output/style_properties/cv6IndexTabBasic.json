@@ -1,0 +1,29 @@
+{
+    "group_name": "cv6Indexable",
+    "title": "Basic Tab styling",
+    "description": "This defines the basic style for the letter tabs. The Seetings above modifies this for the special states.\nThis is \"inactive\" state.",
+    "property_type": "css",
+    "css_components": [
+        "text",
+        "background",
+        "border",
+        "border_radius",
+        "padding",
+        "extra"
+    ],
+    "value_type": "",
+    "value_parameters": "",
+    "depends_on": "",
+    "value_group": "",
+    "property_value": {
+        "color": "@xf-chromeTextColor",
+        "text-decoration": "none",
+        "background-color": "mix(@xf-pageBg, @xf-blockTabHeaderBg , 20%)",
+        "border-width": "@xf-borderSize",
+        "border-color": "@xf-borderColor",
+        "border-top-right-radius": "15px",
+        "padding": "@xf-paddingSmall",
+        "extra": "text-align: center;"
+    },
+    "display_order": 0
+}

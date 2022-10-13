@@ -1,0 +1,1 @@
+The filter can also be removed like any other filter by clicking on the pill.

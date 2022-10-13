@@ -1,0 +1,10 @@
+<xf:macro name="cv6_assetupload::cv6_assetuploadrow" arg-target="optionAsset-{$option.option_id}" 
+    arg-name="{$inputName}" arg-value="{{ $option.option_value ?: $option.default_value }}" 
+    arg-label="{$option.title}" 
+    arg-hint="{$hintHtml}" 
+    arg-explain="{$explainHtml}" 
+    arg-rowclass="{$rowClass}"
+    arg-asset="cv6coreoptions"
+
+/>
+<input type="hidden" name="options_listed[]" value="{$option.option_id}">

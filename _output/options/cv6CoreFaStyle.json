@@ -1,0 +1,20 @@
+{
+    "edit_format": "checkbox",
+    "edit_format_params": "fal={{ phrase('cv6_fa_fal') }}\nfar={{ phrase('cv6_fa_far') }}\nfas={{ phrase('cv6_fa_fas') }}\nfad={{ phrase('cv6_fa_fad') }}\nfab={{ phrase('cv6_fa_fab') }}",
+    "data_type": "array",
+    "sub_options": [
+        "fal",
+        "far",
+        "fas",
+        "fad",
+        "fab"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "{\"fal\":true,\"far\":true,\"fas\":true,\"fad\":true,\"fab\":true}",
+    "relations": {
+        "cv6Core": 110,
+        "debug": 3650
+    }
+}

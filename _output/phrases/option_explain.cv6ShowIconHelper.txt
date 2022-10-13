@@ -1,0 +1,1 @@
+Enable to activate the FA Helper menu inside cv6 AddOns.

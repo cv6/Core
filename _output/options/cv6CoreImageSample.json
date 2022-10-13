@@ -1,0 +1,13 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "cv6_options_template_asset",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": true,
+    "default_value": "",
+    "relations": {
+        "debug": 3601
+    }
+}

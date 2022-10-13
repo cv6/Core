@@ -1,0 +1,13 @@
+{
+    "group_name": "cv6Indexable",
+    "title": "Tab Size",
+    "description": "",
+    "property_type": "value",
+    "css_components": [],
+    "value_type": "unit",
+    "value_parameters": "",
+    "depends_on": "",
+    "value_group": "",
+    "property_value": "26px",
+    "display_order": 110
+}

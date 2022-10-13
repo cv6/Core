@@ -1,0 +1,1 @@
+Used to identify the allowed styles for Font Awesome Icons

@@ -1,0 +1,11 @@
+.cv6-IconVar(@faclass) 
+{
+    @cv6-short: replace(extract(@faclass,1), 'fa-', '');
+    @cv6-iconVar: "fa-var-@{cv6-short}";
+    .m-faContent(@@cv6-iconVar);
+}
+
+.cv6-DefaultOpacity()
+{
+    opacity: @xf-cv6DefaultOpacity  / 100;
+}
