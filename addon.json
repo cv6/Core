@@ -1,13 +1,13 @@
 {
     "legacy_addon_id": "",
     "title": "[cv6] - Core Library",
-    "description": "",
+    "description": "The Core for (nearly) all cv6 AddOns.",
     "version_id": 1010150,
     "version_string": "1.1.1 Release Candidate",
     "dev": "Hoffi",
     "dev_url": "https://xenforo.com/community/members/hoffi.214/",
-    "faq_url": "",
-    "support_url": "",
+    "faq_url": "https://xenforo.com/community/resources/cv6-core.8826/field?field=faq",
+    "support_url": "https://xenforo.com/community/resources/cv6-core.8826/",
     "extra_urls": [],
     "require": {
         "XF": [

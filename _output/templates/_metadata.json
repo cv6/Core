@@ -1,4 +1,9 @@
 {
+    "admin/cv6_Messages.html": {
+        "version_id": 1010150,
+        "version_string": "1.1.1 Release Candidate",
+        "hash": "45bb381fec71b73a260ebab6aaec3218"
+    },
     "admin/cv6_assetupload.html": {
         "version_id": 1000070,
         "version_string": "1.0.0",
@@ -13,6 +18,11 @@
         "version_id": 1000070,
         "version_string": "1.0.0",
         "hash": "068eb30f041dea5d708dcfe89b739fd1"
+    },
+    "admin/cv6_messages.html": {
+        "version_id": 1010150,
+        "version_string": "1.1.1 Release Candidate",
+        "hash": "45bb381fec71b73a260ebab6aaec3218"
     },
     "admin/cv6_options_icon.html": {
         "version_id": 1000070,
