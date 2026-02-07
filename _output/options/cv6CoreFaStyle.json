@@ -11,10 +11,9 @@
     ],
     "validation_class": "",
     "validation_method": "",
-    "advanced": true,
+    "advanced": false,
     "default_value": "{\"fal\":true,\"far\":true,\"fas\":true,\"fad\":true,\"fab\":true}",
     "relations": {
-        "cv6Core": 110,
-        "debug": 3650
+        "cv6Core": 110
     }
 }

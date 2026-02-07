@@ -1,0 +1,9 @@
+{
+    "template": "admin_navigation_edit",
+    "description": "Changes Icon Field",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:textboxrow name=\"icon\" value=\"{$navigation}\"\n\t\t\t\tlabel=\"{{ phrase('font_awesome_icon') }}\"\n\t\t\t\texplain=\"{{ phrase('admin_navigation_icon_explain') }}\"\n\t\t\t\tdir=\"ltr\" />",
+    "replace": "<xf:if is=\"$xf.options.cv6ReplaceXF\">\n\t<xf:macro id=\"cv6_fa_icon::cv6_inputIcon\"\n\t\t\t\targ-name=\"icon\" \n\t\t\t\targ-value=\"{$navigation.icon}\"\n\t\t\t\targ-label=\"{{ phrase('font_awesome_icon') }}\"\n\t\t  \t\targ-target=\"admin-nav\"\n\t\t\t  \targ-placeholder=\"fa-...\"\n\t\t\t  \targ-stylechooser=\"{{ ['style','rotation'] }}\"\n\t\t\t  \targ-explain=\"{{ phrase('admin_navigation_icon_explain') }}\"\n\t\t\t/>\t\n<xf:else />\n\t$0\n</xf:if>"
+}

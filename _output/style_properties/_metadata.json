@@ -1,26 +1,20 @@
 {
     "cv6DefaultOpacity.json": {
-        "hash": "62039c443501c72b588a8223bf225ff1"
+        "hash": "e299228b59205796697c9cb0b7572391"
+    },
+    "cv6IndexTabActive.json": {
+        "hash": "a0969b50c6ecbaf2eb6bc02b1f35801e"
     },
     "cv6IndexTabBasic.json": {
-        "hash": "568334a57020a40b38b2cbd5838e24e3"
+        "hash": "a8bae4d71840bbf9897735e753138d01"
     },
-    "cv6IndexTabBgActive.json": {
-        "hash": "4de9660bd572191dcf14572aa83d5499"
+    "cv6IndexTabHover.json": {
+        "hash": "1f1c926230d7ecd32141bee7c5d8c5ea"
     },
-    "cv6IndexTabBgNoResult.json": {
-        "hash": "804e7542d62548271f27781c80d3d269"
+    "cv6IndexTabNoResult.json": {
+        "hash": "c91fa16140c49a51f9eaee9051971922"
     },
     "cv6IndexTabSize.json": {
-        "hash": "9784c43c788ae443fe0f795bbe26b796"
-    },
-    "cv6IndexTabTextActive.json": {
-        "hash": "669ecd91ffbe53c59d061f497be85a46"
-    },
-    "cv6IndexTabTextHover.json": {
-        "hash": "0c42167968fbd5791e97953e1ec65bbf"
-    },
-    "cv6IndexTabTextNoResult.json": {
-        "hash": "4d9ccacbae177efa1322cfedd5ca8174"
+        "hash": "a0724c8ddd73d0ad521d6200f25b88b9"
     }
 }

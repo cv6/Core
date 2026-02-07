@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style_properties>
-  <style_property property_name="cv6DefaultOpacity" group_name="cv6Core" title="Default opacity" description="when used opacy for less seen items, I alwas use this to have a smoother look.&lt;br /&gt;&#10;Set to 100 to have no opacity." property_type="value" value_type="number" display_order="1">
+  <style_property property_name="cv6DefaultOpacity" group_name="cv6Core" title="Default opacity" description="when used opacy for less seen items, I alwas use this to have a smoother look.&lt;br /&gt;&#10;Set to 100 to have no opacity." property_type="value" value_type="number" has_variations="0" display_order="1">
     <value_parameters>min=0
 max=100</value_parameters>
     <value>"40"</value>
   </style_property>
-  <style_property property_name="cv6IndexTabBasic" group_name="cv6Indexable" title="Basic Tab styling" description="This defines the basic style for the letter tabs. The Seetings above modifies this for the special states.&#10;This is &quot;inactive&quot; state." property_type="css" display_order="0" css_components="text,background,border,border_radius,padding,extra">
+  <style_property property_name="cv6IndexTabActive" group_name="cv6Indexable" title="Active Index Tab" property_type="css" has_variations="0" display_order="40" css_components="text,background,border_color_simple,extra">
+    <value>{
+    "color": "@xf-textColorAccentContent",
+    "font-weight": "@xf-fontWeightHeavy",
+    "text-decoration": "none",
+    "background-color": "mix(@xf-contentHighlightBg, @xf-contentBg, 50%)",
+    "border-color": "@xf-borderColor",
+    "extra": "background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));"
+}</value>
+  </style_property>
+  <style_property property_name="cv6IndexTabBasic" group_name="cv6Indexable" title="Basic Tab styling" description="This defines the basic style for the letter tabs. The Seetings above modifies this for the special states.&#10;This is &quot;inactive&quot; state." property_type="css" has_variations="0" display_order="10" css_components="text,background,border,border_radius,padding,extra">
     <value>{
     "color": "@xf-chromeTextColor",
     "text-decoration": "none",
-    "background-color": "mix(@xf-pageBg, @xf-blockTabHeaderBg , 20%)",
+    "background-color": "@xf-majorHeadingBg",
     "border-width": "@xf-borderSize",
     "border-color": "@xf-borderColor",
     "border-top-right-radius": "15px",
+    "border-bottom-right-radius": "0",
     "padding": "@xf-paddingSmall",
-    "extra": "text-align: center;"
+    "extra": "text-align: center;\nbackground: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));"
 }</value>
   </style_property>
-  <style_property property_name="cv6IndexTabBgActive" group_name="cv6Indexable" title="active/hover tab background color" property_type="value" value_type="color" display_order="30">
-    <value>"mix(@xf-contentHighlightBg, @xf-contentBg, 50%)"</value>
+  <style_property property_name="cv6IndexTabHover" group_name="cv6Indexable" title="Hover Index Tab" property_type="css" has_variations="0" display_order="30" css_components="text,background,border_color_simple,extra">
+    <value>{
+    "color": "@xf-linkHoverColor",
+    "text-decoration": "none",
+    "background-color": "mix(@xf-contentHighlightBg, @xf-contentBg, 50%)",
+    "extra": "background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));"
+}</value>
   </style_property>
-  <style_property property_name="cv6IndexTabBgNoResult" group_name="cv6Indexable" title="no result tab background color" property_type="value" value_type="color" display_order="20">
-    <value>"mix(@xf-pageBg, @xf-blockTabHeaderBg , 50%)"</value>
+  <style_property property_name="cv6IndexTabNoResult" group_name="cv6Indexable" title="No Result Index Tab" property_type="css" has_variations="0" display_order="20" css_components="text,background,border_color_simple,extra">
+    <value>{
+    "color": "@xf-textColorMuted",
+    "background-color": "@xf-contentAltBg"
+}</value>
   </style_property>
-  <style_property property_name="cv6IndexTabSize" group_name="cv6Indexable" title="Tab Size" property_type="value" value_type="unit" display_order="110">
+  <style_property property_name="cv6IndexTabSize" group_name="cv6Indexable" title="Tab Size" property_type="value" value_type="unit" has_variations="0" display_order="110">
     <value>"26px"</value>
-  </style_property>
-  <style_property property_name="cv6IndexTabTextActive" group_name="cv6Indexable" title="active tab text color" property_type="value" value_type="color" display_order="35">
-    <value>"@xf-linkColor"</value>
-  </style_property>
-  <style_property property_name="cv6IndexTabTextHover" group_name="cv6Indexable" title="hover tab text color" property_type="value" value_type="color" display_order="45">
-    <value>"@xf-linkHoverColor"</value>
-  </style_property>
-  <style_property property_name="cv6IndexTabTextNoResult" group_name="cv6Indexable" title="no result tab text color" property_type="value" value_type="color" display_order="25">
-    <value>"@xf-blockTabHeaderTextColor"</value>
   </style_property>
 </style_properties>

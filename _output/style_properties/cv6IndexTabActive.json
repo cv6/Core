@@ -1,0 +1,26 @@
+{
+    "group_name": "cv6Indexable",
+    "title": "Active Index Tab",
+    "description": "",
+    "property_type": "css",
+    "css_components": [
+        "text",
+        "background",
+        "border_color_simple",
+        "extra"
+    ],
+    "value_type": "",
+    "value_parameters": "",
+    "has_variations": false,
+    "depends_on": "",
+    "value_group": "",
+    "property_value": {
+        "color": "@xf-textColorAccentContent",
+        "font-weight": "@xf-fontWeightHeavy",
+        "text-decoration": "none",
+        "background-color": "mix(@xf-contentHighlightBg, @xf-contentBg, 50%)",
+        "border-color": "@xf-borderColor",
+        "extra": "background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));"
+    },
+    "display_order": 40
+}

@@ -1,4 +1,4 @@
-<xf:macro name="letters" 
+<xf:macro id="letters" 
     arg-index="!" 
     arg-class="{{ false }}" 
     arg-route="!" 
@@ -11,36 +11,28 @@
         <span class="hScroller-scroll">
             <ul class="cv6-letterindex {$class}">
                 <xf:if is="$xf.options.cv6RemoveTab">
-                    <li title="{{ phrase('cv6_remove_filter') }}" data-xf-init="tooltip" class="remove{{ !$index.letter ? ' active' : ''}}">
+                    <li title="{{ phrase('cv6_remove_filter') }}" data-xf-init="tooltip"
+                        class="cv6-index--link  remove{{ !$index.letter ? ' active' : ''}}">
                         <a href="{{ link($route,{$params}, {'letter':'-'}) }}">
                             <xf:fa icon="fa-ban" />
                         </a>
                     </li>
                 </xf:if>
-                <xf:if is="$number">
-                    <li
-                        class="{{ $index.letter == '0-9' ? 'active' : '' }}{{ ($index.counter.0 > 0 || !$index.counter) ? '' : ' no-result'}}">
-                        <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}">{$numbersign}</a>
-                    </li>
-                </xf:if>
-                <xf:foreach loop="$index.list" value="$letter">
-                    <li 
-                        class="{{ $letter == $index.letter ? 'active' : '' }} {{ ($index.counter.{$letter} > 0 || !$index.counter ) ? '' : ' no-result'}}">
-                        <a href="{{ link($route, $params, {'letter':$letter}) }}">{$letter}</a>
-                    </li>
-                </xf:foreach>
-                <xf:if is="$other">
-                    <li
-                        class="{{ $index.letter == '_' ? 'active' : '' }}{{ ($index.counter._ > 0 || !$index.counter) ? '' : ' no-result'}}">
-                        <a href="{{ link($route,{$params}, {'letter':'_'}) }}">{$othersign}</a>
-                    </li>
-                </xf:if>
+                <xf:macro id="rawIndex" 
+                    arg-index="{$index}" 
+                    arg-route="{$route}" 
+                    arg-params="{$params}" 
+                    arg-other="{$other}" 
+                    arg-othersign="{$othersign}" 
+                    arg-number="{$number}" 
+                    arg-numbersign="{$numbersign}"
+                />
             </ul>
         </span>
     </div>
 </xf:macro>
 
-<xf:macro name="filter"
+<xf:macro id="filter"
     arg-letter="!"
     arg-route="!"
     arg-params="{{ [] }}" 
@@ -55,5 +47,63 @@
                 </li>
             </xf:contentcheck>
         </ul>
+    </xf:if>
+</xf:macro>
+
+<xf:macro id="widget" 
+    arg-index="!" 
+    arg-class="" 
+    arg-route="!" 
+    arg-params="{{ [] }}" 
+    arg-other="0"
+    arg-othersign="{{ phrase('cv6_character_other') }}" arg-number="0"
+    arg-numbersign="{{ phrase('cv6_character_number') }}">
+    <xf:css src="cv6_letterindex.less" />
+    <ul class="cv6-letterindex cv6-letterindex--widget {$class}">
+        <xf:macro id="rawIndex" 
+            arg-index="{$index}" 
+            arg-route="{$route}" 
+            arg-params="{$params}" 
+            arg-other="{$other}"
+            arg-othersign="{$othersign}" 
+            arg-number="{$number}" 
+            arg-numbersign="{$numbersign}"
+         />
+    </ul>
+</xf:macro>
+
+<xf:macro id="rawIndex" 
+        arg-index="!" 
+        arg-route="!" 
+        arg-params="{{ [] }}"
+        arg-other="0" arg-othersign="{{ phrase('cv6_character_other') }}"
+        arg-number="0" arg-numbersign="{{ phrase('cv6_character_number') }}"        
+    >
+    <xf:if is="$number">
+        <li class="cv6-index--link{{ $index.letter == '0-9' ? ' active' : '' }}{{ ($index.counter.0 > 0 || !$index.counter) ? '' : ' no-result'}}">
+            <xf:if is="$index.letter == '0-9'">
+                <a href="{{ link($route,{$params}) }}">{$numbersign}</a>
+            <xf:else />
+                <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}">{$numbersign}</a>
+            </xf:if>
+        </li>
+    </xf:if>
+    <xf:foreach loop="$index.list" value="$letter">
+        <li class="cv6-index--link{{ $letter == $index.letter ? ' active' : '' }}{{ ($index.counter.{$letter} > 0 || !$index.counter ) ? '' : ' no-result'}}">
+            <xf:if is="$index.letter == $letter">
+                <a href="{{ link($route, $params) }}">{$letter}</a>
+            <xf:else />
+                <a href="{{ link($route, $params, {'letter':$letter}) }}">{$letter}</a>
+            </xf:if>
+        </li>
+    </xf:foreach>
+    <xf:if is="$other">
+        <li class="cv6-index--link{{ $index.letter == '_' ? ' active' : '' }}{{ ($index.counter._ > 0 || !$index.counter) ? '' : ' no-result'}}">
+            <xf:if is="$index.letter == '_'">
+                <a href="{{ link($route,{$params}) }}">{$othersign}</a>
+            <xf:else />
+                <a href="{{ link($route, $params, {'letter':'_'}) }}">{$othersign}</a>
+            </xf:if>
+        </li>
     </xf:if>
 </xf:macro>

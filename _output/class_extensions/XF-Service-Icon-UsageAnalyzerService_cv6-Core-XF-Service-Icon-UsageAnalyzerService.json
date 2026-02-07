@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Service\\Icon\\UsageAnalyzerService",
+    "to_class": "cv6\\Core\\XF\\Service\\Icon\\UsageAnalyzerService",
+    "execute_order": 15,
+    "active": true
+}

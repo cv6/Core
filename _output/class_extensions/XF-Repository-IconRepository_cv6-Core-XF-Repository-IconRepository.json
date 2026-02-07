@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Repository\\IconRepository",
+    "to_class": "cv6\\Core\\XF\\Repository\\IconRepository",
+    "execute_order": 9,
+    "active": true
+}

@@ -13,17 +13,19 @@
     ],
     "value_type": "",
     "value_parameters": "",
+    "has_variations": false,
     "depends_on": "",
     "value_group": "",
     "property_value": {
         "color": "@xf-chromeTextColor",
         "text-decoration": "none",
-        "background-color": "mix(@xf-pageBg, @xf-blockTabHeaderBg , 20%)",
+        "background-color": "@xf-majorHeadingBg",
         "border-width": "@xf-borderSize",
         "border-color": "@xf-borderColor",
         "border-top-right-radius": "15px",
+        "border-bottom-right-radius": "0",
         "padding": "@xf-paddingSmall",
-        "extra": "text-align: center;"
+        "extra": "text-align: center;\nbackground: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));"
     },
-    "display_order": 0
+    "display_order": 10
 }

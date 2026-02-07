@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<code_events/>
+<code_events>
+  <event event_id="cv6_add_copyright"><![CDATA[<p>
+	Internal use for adding Copyrights in the footer.
+</p>]]></event>
+  <event event_id="cv6_add_js_dependencies"><![CDATA[<p>Allows to deifne JS dependencies via easy Array Config..</p>
+<p>
+	This only listens to the dev and prod arguments in the xf:js Tag.
+</p>
+<p>
+	If you use this for your own development, the AddOn <strong>cv6/Core</strong> needs to be installed!
+</p>
+<p>Callback signature:</p>
+<blockquote><em>array</em> <code>&amp;$dependencies</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><em>Array</em> <code>&amp;$dependencies</code> - Array JS Files and the dependency.</li>
+</ol>
+
+<p>Example:</p>
+<pre> public static function getJsDependencys(&amp;$dependencies)
+{
+	$dependencies[] = [
+    	'my/AddOn' => [
+			'my/AddOn/sample.js' => [
+            	['dev' => 'xf/form.js', 'prod' => 'xf/form.min.js']
+            ]
+        ]
+    ];
+}
+</pre>]]></event>
+</code_events>

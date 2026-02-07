@@ -1,0 +1,1 @@
+enables FA preview and Layout Menu

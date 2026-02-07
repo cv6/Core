@@ -4,9 +4,7 @@
     ],
     "minify": [
         "js/cv6/core/asset.js",
+        "js/cv6/core/combosort.js",
         "js/cv6/core/icon.js"
-    ],
-    "exec": [
-        "echo '{title} version {version_string} ({version_id}) has been built successfully!' >> '/b12/new/src/addons/{addon_id}/_releases/built.txt'"
     ]
 }

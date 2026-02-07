@@ -11,7 +11,6 @@
     "advanced": true,
     "default_value": "{\"fa-spin\":true,\"fa-pulse\":true}",
     "relations": {
-        "cv6Core": 130,
-        "debug": 3652
+        "cv6Core": 130
     }
 }

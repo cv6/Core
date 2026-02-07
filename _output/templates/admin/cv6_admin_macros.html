@@ -1,0 +1,6 @@
+<xf:macro name="is_active" arg-active="active" arg-selected="!" arg-label="" arg-hint="">
+    <xf:checkboxrow>
+        <xf:option name="{$active}" selected="{$selected}" label="{{ $label ?: phrase('cv6_is_active') }}"
+            hint="{{ $hint ?: phrase('cv6_active_hint') }}" />
+    </xf:checkboxrow>
+</xf:macro>

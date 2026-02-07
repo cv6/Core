@@ -1,0 +1,28 @@
+<xf:macro id="letters" arg-index="!" arg-class="{{ false }}" arg-route="!" arg-params="{{ [] }}" arg-number="0">
+    <div class="block-cv6-letterindex hScroller" data-xf-init="h-scroller" data-auto-scroll=".active">
+        <span class="hScroller-scroll">
+            <ul class="cv6-letterindex {$class}">
+                <xf:if is="$number">
+                    <li>
+                        <a href="{{ link($route,{$params}, {'letter':'0-9'}) }}"
+                            class="{{ $index.letter == '0-9' ? 'active' : ''}}">
+                            #
+                        </a>
+                    </li>
+                </xf:if>
+                <xf:foreach loop="$index.list" value="$letter">
+                    <li>
+                        <a href="{{ link($route, $params, {'letter':$letter}) }}"
+                            class="{{ $letter == $index.letter ?'active':''}}">{$letter}</a>
+                    </li>
+                </xf:foreach>
+                <li>
+                    <a href="{{ link($route,{$params}, {'letter':'-'}) }}" title="{{ phrase('cv6_remove_filter') }}"
+                        data-xf-init="tooltip">
+                        <xf:fa icon="fa-ban" />
+                    </a>
+                </li>
+            </ul>
+        </span>
+    </div>
+</xf:macro>

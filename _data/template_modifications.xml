@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="cv6DiceRollerCopyright" description="Adds Copyright Footer" execution_order="1" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:copyright />]]></find>
+    <replace><![CDATA[$0<br />
+{{ ddcopyright() }}]]></replace>
+  </modification>
+  <modification type="admin" template="admin_navigation_edit" modification_key="cv6_core_ane_add_icon" description="Changes Icon Field" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:textboxrow name="icon" value="{$navigation}"
+				label="{{ phrase('font_awesome_icon') }}"
+				explain="{{ phrase('admin_navigation_icon_explain') }}"
+				dir="ltr" />]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.cv6ReplaceXF">
+	<xf:macro id="cv6_fa_icon::cv6_inputIcon"
+				arg-name="icon" 
+				arg-value="{$navigation.icon}"
+				arg-label="{{ phrase('font_awesome_icon') }}"
+		  		arg-target="admin-nav"
+			  	arg-placeholder="fa-..."
+			  	arg-stylechooser="{{ ['style','rotation'] }}"
+			  	arg-explain="{{ phrase('admin_navigation_icon_explain') }}"
+			/>	
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="admin" template="bb_code_button_manager_dropdown_edit" modification_key="cv6_core_bbcbm_change_input" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[				<xf:textboxrow name="icon" value="{$dropdown}" label="{{ phrase('icon') }}">
+					<xf:explain>{{ phrase('you_can_preview_icons_and_their_names_here') }}</xf:explain>
+				</xf:textboxrow>]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.cv6ReplaceXF">
+	<xf:macro id="cv6_fa_icon::cv6_inputIcon"
+				arg-name="icon" 
+				arg-value="{$dropdown.icon}"
+				arg-label="{{ phrase('icon') }}"
+		  		arg-target="bbcode-dd"
+			  	arg-placeholder="fa-button"
+			  	arg-stylechooser="{{ ['style'] }}"
+			  	arg-explain="{{ phrase('you_can_preview_icons_and_their_names_here')|raw }}"
+			/>	
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
   <modification type="admin" template="bb_code_edit" modification_key="cv6_core_bbce_add_fa" description="Adds FA Icon functionality" execution_order="10" enabled="1" action="str_replace">
     <find><![CDATA[					<xf:textbox name="editor_icon_fa"
 						readonly="{{ !$bbCode.canEdit() }}"
 						value="{{ $bbCode.editor_icon_type == 'fa' ? $bbCode.editor_icon_value : '' }}"
 						maxlength="{{ max_length($bbCode, 'editor_icon_value') }}"
 						dir="ltr" />]]></find>
-    <replace><![CDATA[$0
-<xf:macro name="cv6_fa_icon::cv6_inputIcon"
+    <replace><![CDATA[<xf:macro name="cv6_fa_icon::cv6_inlineIcon"
 	arg-target="bbcode-icon"
 	arg-name="editor_icon_fa" 
 	arg-readonly="{{ !$bbCode.canEdit() }}"
-	arg-stylechooser="{false}"
 	arg-maxlength="{{ max_length($bbCode, 'editor_icon_value') }}"
+	arg-stylechooser="{{ ['style'] }}"
 	arg-value="{{ $bbCode.editor_icon_type == 'fa' ? $bbCode.editor_icon_value : '' }}" 
 />]]></replace>
   </modification>
@@ -23,12 +64,11 @@
 				arg-name="icon" 
 				arg-value="{$group.icon}"
 				arg-label="{{ phrase('icon') }}"
-		  		arg-target="option-group"
+		  		arg-target="option-{$group.group_id}"
 			/>]]></replace>
   </modification>
-  <modification type="public" template="setup_fa.less" modification_key="cv6_core_add_fa_function" description="adds fa function" execution_order="10" enabled="1" action="str_replace">
-    <find><![CDATA[{{ include('setup_fa4_variables.less') }}]]></find>
-    <replace><![CDATA[$0
-{{ include('cv6_fa.less') }}]]></replace>
+  <modification type="public" template="setup_fa.less" modification_key="cv6_core_add_fa_function" description="adds fa function" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/$/]]></find>
+    <replace><![CDATA[{{ include('cv6_fa.less') }}]]></replace>
   </modification>
 </template_modifications>

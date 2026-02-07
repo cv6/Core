@@ -1,0 +1,20 @@
+<xf:selectrow name="{$inputName}[]" 
+    label="{$option.title}" 
+    hint="{$hintHtml}" 
+    explain="{$explainHtml}"
+    html="{$listedHtml}" 
+    rowclass="{$rowClass}" 
+    multiple="multiple" size="10" 
+    value="{$option.option_value}">
+
+    <xf:foreach loop="$nodes" value="$node">
+        <xf:option value="{$node.record.node_id}"
+            disabled="{{ $node.record.node_type_id == 'Category' || $node.record.node_type_id == 'Page' }}"
+            selected="{{ $option.option_value && in_array($node.record.node_id, $option.option_value) }}">
+
+            {{ repeat('--', $node.depth) }} {$node.record.title}
+
+        </xf:option>
+    </xf:foreach>
+
+</xf:selectrow> 

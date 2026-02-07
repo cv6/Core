@@ -7,7 +7,6 @@ fa-pulse={{ phrase('cv6_fa_fa_pulse') }}</edit_format_params>
     <sub_options>fa-spin
 fa-pulse</sub_options>
     <relation group_id="cv6Core" display_order="130"/>
-    <relation group_id="debug" display_order="3652"/>
   </option>
   <option option_id="cv6CoreFaRotation" edit_format="checkbox" data_type="array" advanced="1">
     <default_value>{"fa-rotate-90":true,"fa-rotate-180":true,"fa-rotate-270":true,"fa-flip-vertical":true,"fa-flip-horizontal":true}</default_value>
@@ -22,9 +21,8 @@ fa-rotate-270
 fa-flip-vertical
 fa-flip-horizontal</sub_options>
     <relation group_id="cv6Core" display_order="120"/>
-    <relation group_id="debug" display_order="3651"/>
   </option>
-  <option option_id="cv6CoreFaStyle" edit_format="checkbox" data_type="array" advanced="1">
+  <option option_id="cv6CoreFaStyle" edit_format="checkbox" data_type="array" advanced="0">
     <default_value>{"fal":true,"far":true,"fas":true,"fad":true,"fab":true}</default_value>
     <edit_format_params>fal={{ phrase('cv6_fa_fal') }}
 far={{ phrase('cv6_fa_far') }}
@@ -37,39 +35,41 @@ fas
 fad
 fab</sub_options>
     <relation group_id="cv6Core" display_order="110"/>
-    <relation group_id="debug" display_order="3650"/>
   </option>
   <option option_id="cv6CoreImageSample" edit_format="template" data_type="string" advanced="1">
     <default_value></default_value>
     <edit_format_params>cv6_options_template_asset</edit_format_params>
     <relation group_id="debug" display_order="3601"/>
   </option>
-  <option option_id="cv6IconSample" edit_format="template" data_type="string" advanced="1">
+  <option option_id="cv6IconSample" edit_format="template" data_type="string" validation_class="\cv6\Core\Option\Check" validation_method="verifyValidIconMandatory" advanced="1">
     <default_value>fa-check</default_value>
     <edit_format_params>template=cv6_options_template_icon
 rotation=1
 animation=1</edit_format_params>
     <relation group_id="debug" display_order="3600"/>
   </option>
-  <option option_id="cv6LetterRegExp" edit_format="textbox" data_type="string" advanced="0">
+  <option option_id="cv6LetterRegExp" edit_format="textbox" data_type="string" advanced="1">
     <default_value>[a-zA-Z]</default_value>
-    <relation group_id="debug" display_order="3699"/>
+    <relation group_id="cv6Core" display_order="800"/>
   </option>
-  <option option_id="cv6MarkEmptyLetter" edit_format="onoff" data_type="boolean" advanced="1">
+  <option option_id="cv6MarkEmptyLetter" edit_format="onoff" data_type="boolean" advanced="0">
     <default_value>1</default_value>
-    <relation group_id="cv6Core" display_order="500"/>
+    <relation group_id="cv6Core" display_order="1"/>
     <relation group_id="cv6LetterIndex" display_order="10"/>
     <relation group_id="nodeList" display_order="1500"/>
   </option>
-  <option option_id="cv6MinimumContent" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
-    <default_value>50</default_value>
-    <edit_format_params>min=0
-max=1000000000</edit_format_params>
-    <relation group_id="cv6LetterIndex" display_order="20"/>
-  </option>
-  <option option_id="cv6ShowIconHelper" edit_format="onoff" data_type="boolean" advanced="1">
+  <option option_id="cv6RemoveTab" edit_format="onoff" data_type="boolean" advanced="0">
     <default_value>1</default_value>
-    <relation group_id="acp" display_order="600"/>
+    <relation group_id="cv6LetterIndex" display_order="105"/>
+  </option>
+  <option option_id="cv6ReplaceXF" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="acp" display_order="3610"/>
+    <relation group_id="cv6Core" display_order="102"/>
+  </option>
+  <option option_id="cv6ShowIconHelper" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="acp" display_order="3615"/>
     <relation group_id="cv6Core" display_order="101"/>
   </option>
   <option option_id="cv6ShowNumberTab" edit_format="onofftextbox" data_type="array" advanced="0">
@@ -97,5 +97,10 @@ default=?</edit_format_params>
 character</sub_options>
     <relation group_id="cv6LetterIndex" display_order="120"/>
     <relation group_id="nodeList" display_order="1502"/>
+  </option>
+  <option option_id="cv6extraFaIcons" edit_format="textbox" data_type="string" validation_class="XF\Option\Icon" validation_method="verifyOption" advanced="1">
+    <default_value></default_value>
+    <edit_format_params>rows=3</edit_format_params>
+    <relation group_id="cv6Core" display_order="900"/>
   </option>
 </options>

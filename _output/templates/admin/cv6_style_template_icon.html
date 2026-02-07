@@ -1,10 +1,11 @@
-<xf:macro name="cv6_fa_icon::cv6_inputIcon" 
+<xf:macro id="cv6_fa_icon::cv6_inputIcon" 
     arg-target="cv6-property-{$property.property_id}" 
     arg-rowclass="{$rowClass}"
     arg-name="{$formBaseKey}"
     arg-label="{$titleHtml}" 
     arg-hint="{$hintHtml}"
-    arg-explain="{$property.description}" 
+    arg-explain="{$property.description}  {{ phrase('cv6_no_style') }}" 
     arg-value="{$property.property_value}"
     arg-stylechooser="{{ [ $valueOptions.style == 1 ? 'style' : '', $valueOptions.rotation == 1 ? 'rotation' : '' ,  $valueOptions.animation == 1 ? 'animation' : ''] }}"
+    arg-type="style"
 />

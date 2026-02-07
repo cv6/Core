@@ -1,1 +1,2 @@
-Options for the letter index tabs
+Options for the letter index tabs<br />
+<em>This will only have efefct if you have any index addon from me installed.</em>

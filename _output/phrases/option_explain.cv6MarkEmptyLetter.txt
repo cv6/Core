@@ -1,1 +1,1 @@
-If you want to mark empty letters, activate this option. This will add one additional query to every page.
+If you want to mark empty letters, activate this option. This can have impact on the performance.

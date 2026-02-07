@@ -14,12 +14,21 @@ trait IndexTrait
 {
     private $indexColumn = null;
 
-    private $createdIndex = null;
+    private $createdIndex = [
+        0 => null,
+        1 => null
+    ];
+
 
     abstract function getIndexColumn();
 
     public function getIndexTable() {
         return $this->getStructure()->table;
+    }
+
+    public function displayIndex()
+    {
+        return (bool) ($this->cv6_display_index && $this->hasIndex());
     }
 
     public function hasIndex()
@@ -44,9 +53,10 @@ trait IndexTrait
     {
     }
 
-    public function fetchLetterIndex($withCounter = false, Finder &$finder = null)
+    public function fetchLetterIndex(int $withCounter = 0, Finder &$finder = null)
     {
-        if ($this->createdIndex === null)
+        $withCounter = $withCounter == 1 ?: 0;
+        if ($this->createdIndex[$withCounter] === null)
         {
 
             if (!$this->hasIndex()) 
@@ -62,8 +72,7 @@ trait IndexTrait
 
             $letterIndex = range('A', 'Z');
             $hide = array_flip(array_merge(['0','_'],$letterIndex));
-
-            if ($withCounter) {
+            if ($withCounter == 1) {
                 $index = $this->fetchLetterCounter();
                 $indexCounter = [];
                 foreach ($index as $character => $count) 
@@ -131,7 +140,7 @@ trait IndexTrait
             }
             $showIndex = true;
 
-            $this->createdIndex = [
+            $this->createdIndex[$withCounter] = [
                 'show' => $showIndex,
                 'list' => $letterIndex,
                 'hide' => array_flip($hide),
@@ -139,12 +148,13 @@ trait IndexTrait
                 'counter' => $indexCounter
             ];
         }
-        return $this->createdIndex;
+        return $this-> createdIndex[$withCounter];
     }
 
     public static function addIndexableStructureElements(Structure $structure)
     {
         $structure->columns['cv6_indexable'] = ['type' => Entity::BOOL, 'default' => false];
+        $structure->columns['cv6_display_index'] = ['type' => Entity::BOOL, 'default' => false];
     }
 
 }

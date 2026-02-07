@@ -1,38 +1,41 @@
 {
     "cv6CoreFaAnimation.json": {
-        "hash": "b2108f66ae43b85dbfef6eed5302cd16"
+        "hash": "3da7b0ada934fd0de9e5b5d35e16250f"
     },
     "cv6CoreFaRotation.json": {
-        "hash": "b51228a0da0bd6d2da379cb1db4c7cd4"
+        "hash": "047957d3a78881bfa9a6f27fba1460ed"
     },
     "cv6CoreFaStyle.json": {
-        "hash": "da016cc8928f563df3b45e9e0d7e0cb8"
+        "hash": "f4628cb0c11b262001e8cc75a5ab4422"
     },
     "cv6CoreImageSample.json": {
         "hash": "6a76352f7e3b6f7bde9302fbaa13b5af"
     },
     "cv6IconSample.json": {
-        "hash": "d515160b5fe28007d0c716d6445d88dc"
+        "hash": "76e27658f8800f18aecf6bcbfdc234aa"
     },
     "cv6LetterRegExp.json": {
-        "hash": "179c9d01c43f7272e39f91979c48372f"
+        "hash": "4cebcf8749c78b9d04b416cf3d4bdb3d"
     },
     "cv6MarkEmptyLetter.json": {
-        "hash": "524070b01c3c1a7d2816e9041592ba1e"
-    },
-    "cv6MinimumContent.json": {
-        "hash": "bca5338bbf669d4712c539804d431b51"
+        "hash": "0ba3170cc87637620cc354c7109982e4"
     },
     "cv6RemoveTab.json": {
         "hash": "4bab0f96867069ab30ec85b01616e22c"
     },
+    "cv6ReplaceXF.json": {
+        "hash": "6543aae603cafe8491b080f7f10a40d6"
+    },
     "cv6ShowIconHelper.json": {
-        "hash": "36a6a1bfbf767e2673109d723b1e82d4"
+        "hash": "1ef2e07350e526762d1dd4287ae56f86"
     },
     "cv6ShowNumberTab.json": {
         "hash": "c76336b58cff25c0a9c240c03c639540"
     },
     "cv6ShowOthersTab.json": {
         "hash": "d97d21e1aafcceeda0e680509f6f6ee3"
+    },
+    "cv6extraFaIcons.json": {
+        "hash": "f9ae0c29018c1ea2bc9c4473511c72fd"
     }
 }

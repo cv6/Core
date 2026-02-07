@@ -3,8 +3,8 @@
     "edit_format_params": "template=cv6_options_template_icon\nrotation=1\nanimation=1",
     "data_type": "string",
     "sub_options": [],
-    "validation_class": "",
-    "validation_method": "",
+    "validation_class": "\\cv6\\Core\\Option\\Check",
+    "validation_method": "verifyValidIconMandatory",
     "advanced": true,
     "default_value": "fa-check",
     "relations": {

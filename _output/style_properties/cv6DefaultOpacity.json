@@ -6,6 +6,7 @@
     "css_components": [],
     "value_type": "number",
     "value_parameters": "min=0\nmax=100",
+    "has_variations": false,
     "depends_on": "",
     "value_group": "",
     "property_value": "40",

@@ -1,5 +1,5 @@
 {
-    "icon": "fa-cog fad",
+    "icon": "fa-cog",
     "display_order": 3600,
     "advanced": true,
     "debug_only": false

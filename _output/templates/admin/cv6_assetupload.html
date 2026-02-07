@@ -1,4 +1,4 @@
-<xf:macro name="cv6_assetuploadrow" 
+<xf:macro id="cv6_assetuploadrow" 
     arg-name="!" 
     arg-asset="!"
     arg-label="" 
@@ -7,9 +7,13 @@
     arg-explain=""
     arg-value="" 
     arg-class=""
-    arg-placeholder="path/to/sample.svg">
+    arg-placeholder="path/to/sample.svg"
+    arg-preselector="" 
+    >
 
-    <xf:js src="cv6/core/asset.js" min="1" addon="cv6/Core" />
+    <!-- <xf:js src="xf/form.js" min="1" /> -->
+    <xf:js prod="cv6/cv6core-admin.js" dev="cv6/core/asset.js" min="1" addon="cv6/Core" />
+    
     <xf:css src="cv6_core.less" />
 
     <xf:assetuploadrow 
@@ -23,5 +27,13 @@
         placeholder="{$placeholder}"
         class="cv6--asset-imagepreview {$class}" 
         data-xf-init="cv6AssetImage" />
+
+    <xf:if is="{$preselector}">
+        <xf:formrow rowtype="" label="">
+            <xf:foreach loop="$preselector" value="$image">
+                <img src="{$image}" class="cv6-preset-link" data-xf-init="cv6InsertPreset" data-target="{$name}" />
+            </xf:foreach>
+        </xf:formrow>
+    </xf:if>
 
 </xf:macro>

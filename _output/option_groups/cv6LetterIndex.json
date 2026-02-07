@@ -1,5 +1,5 @@
 {
-    "icon": "fa-spell-check fad",
+    "icon": "fa-spell-check",
     "display_order": 3750,
     "advanced": false,
     "debug_only": false

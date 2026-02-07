@@ -14,7 +14,7 @@
         padding-right: @xf-borderRadiusLarge;
         height: @xf-cv6IndexTabSize;
 
-        li {
+        li.cv6-index--link {
             .xf-cv6IndexTabBasic();
 
             display: inline-block;
@@ -31,11 +31,10 @@
             }
                 
             &.no-result {
-                // cursor: wait;
-                color: @xf-cv6IndexTabTextNoResult;
-                background-color: @xf-cv6IndexTabBgNoResult;
+                .xf-cv6IndexTabNoResult();
                 &:hover {
-                    color: @xf-cv6IndexTabTextNoResult;
+                    background: @xf-cv6IndexTabNoResult--background-color;
+                    color: @xf-cv6IndexTabNoResult--color;
                     a {
                         cursor: default;
                     }
@@ -43,18 +42,15 @@
             }
 
             &:hover {
+                .xf-cv6IndexTabHover();
                 text-decoration: none;
-                background-color: @xf-cv6IndexTabBgActive;
-                color: @xf-cv6IndexTabTextHover;
                 height: @xf-cv6IndexTabSize;
             }
 
             &.active {
-                background-color: @xf-cv6IndexTabBgActive;
-                border-bottom-color: @xf-cv6IndexTabBgActive;
-                color: @xf-cv6IndexTabTextActive;
+                .xf-cv6IndexTabActive();
                 height: @xf-cv6IndexTabSize;
-                font-weight: @xf-fontWeightHeavy;
+                border-bottom: 0px;
             }
 
             a {
@@ -69,5 +65,57 @@
         .m-hScrollerActionColorVariation(xf-default(@xf-pageBg, transparent),
             xf-default(@xf-standaloneTab--color, ~""),
             xf-default(@xf-standaloneTabSelected--color, ~""));
+    }
+}
+
+.cv6-letterindex.cv6-letterindex--widget {
+    .m-listPlain();
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    li.cv6-index--link {
+        .xf-cv6IndexButtonWidget();
+       
+        display: inline-block;
+        flex-grow: 1;
+        overflow: hidden;
+        width: @xf-cv6IndexTabSize;
+        min-width: max-content;
+
+        .m-transition();
+
+        &.remove {
+            height: @xf-cv6IndexTabSize;
+        }
+
+        &.no-result {
+            .xf-cv6IndexTabNoResult();
+
+            &:hover {
+                background: @xf-cv6IndexTabNoResult--background-color;
+                color: @xf-cv6IndexTabNoResult--color;
+
+                a {
+                    cursor: default;
+                }
+            }
+        }
+
+        &:hover {
+            .xf-cv6IndexTabHover();
+            text-decoration: none;
+        }
+
+        &.active {
+            .xf-cv6IndexTabActive();
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
     }
 }

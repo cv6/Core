@@ -5,10 +5,10 @@
     "sub_options": [],
     "validation_class": "",
     "validation_method": "",
-    "advanced": true,
+    "advanced": false,
     "default_value": "1",
     "relations": {
-        "acp": 600,
+        "acp": 3615,
         "cv6Core": 101
     }
 }

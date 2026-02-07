@@ -1,0 +1,1 @@
+Please enter a valid font awesome icon class.

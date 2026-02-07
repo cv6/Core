@@ -5,10 +5,10 @@
     "sub_options": [],
     "validation_class": "",
     "validation_method": "",
-    "advanced": true,
+    "advanced": false,
     "default_value": "1",
     "relations": {
-        "cv6Core": 500,
+        "cv6Core": 1,
         "cv6LetterIndex": 10,
         "nodeList": 1500
     }

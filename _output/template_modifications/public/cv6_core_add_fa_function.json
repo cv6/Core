@@ -3,7 +3,7 @@
     "description": "adds fa function",
     "execution_order": 10,
     "enabled": true,
-    "action": "str_replace",
-    "find": "{{ include('setup_fa4_variables.less') }}",
-    "replace": "$0\n{{ include('cv6_fa.less') }}"
+    "action": "preg_replace",
+    "find": "/$/",
+    "replace": "{{ include('cv6_fa.less') }}"
 }

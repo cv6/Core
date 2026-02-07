@@ -1,2 +1,0 @@
-if in the content has less entries, the index is hidden.<br />
-set 0 to disable

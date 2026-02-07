@@ -2,28 +2,60 @@
 // DO NOT EDIT DIRECTLY. EDIT THE STYLE PROPERTIES IN THE CONTROL PANEL.
 
 @xf-cv6DefaultOpacity: 40;
-@xf-cv6IndexTabBgActive: mix(@xf-contentHighlightBg, @xf-contentBg, 50%);
-@xf-cv6IndexTabBgNoResult: mix(@xf-pageBg, @xf-blockTabHeaderBg , 50%);
 @xf-cv6IndexTabSize: 26px;
-@xf-cv6IndexTabTextActive: @xf-linkColor;
-@xf-cv6IndexTabTextHover: @xf-linkHoverColor;
-@xf-cv6IndexTabTextNoResult: @xf-blockTabHeaderTextColor;
+
+.xf-cv6IndexTabActive()
+{
+	color: @xf-textColorAccentContent;
+	font-weight: @xf-fontWeightHeavy;
+	text-decoration: none;
+	background: mix(@xf-contentHighlightBg, @xf-contentBg, 50%);
+	border-color: @xf-borderColor;
+	background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));
+}
 
 .xf-cv6IndexTabBasic()
 {
 	color: @xf-chromeTextColor;
 	text-decoration: none;
-	background: mix(@xf-pageBg, @xf-blockTabHeaderBg , 20%);
+	background: @xf-majorHeadingBg;
 	border: @xf-borderSize solid @xf-borderColor;
 	border-top-right-radius: 15px;
+	border-bottom-right-radius: 0;
 	padding: @xf-paddingSmall;
 	text-align: center;
+	background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));
 }
 
+.xf-cv6IndexTabHover()
+{
+	color: @xf-linkHoverColor;
+	text-decoration: none;
+	background: mix(@xf-contentHighlightBg, @xf-contentBg, 50%);
+	background: linear-gradient(180deg, @xf-contentHighlightBg, xf-diminish(@xf-contentHighlightBg, 5%));
+}
+
+.xf-cv6IndexTabNoResult()
+{
+	color: @xf-textColorMuted;
+	background: @xf-contentAltBg;
+}
+
+@xf-cv6IndexTabActive--color: @xf-textColorAccentContent;
+@xf-cv6IndexTabActive--font-weight: @xf-fontWeightHeavy;
+@xf-cv6IndexTabActive--text-decoration: none;
+@xf-cv6IndexTabActive--background-color: mix(@xf-contentHighlightBg, @xf-contentBg, 50%);
+@xf-cv6IndexTabActive--border-color: @xf-borderColor;
 @xf-cv6IndexTabBasic--color: @xf-chromeTextColor;
 @xf-cv6IndexTabBasic--text-decoration: none;
-@xf-cv6IndexTabBasic--background-color: mix(@xf-pageBg, @xf-blockTabHeaderBg , 20%);
+@xf-cv6IndexTabBasic--background-color: @xf-majorHeadingBg;
 @xf-cv6IndexTabBasic--border-width: @xf-borderSize;
 @xf-cv6IndexTabBasic--border-color: @xf-borderColor;
 @xf-cv6IndexTabBasic--border-top-right-radius: 15px;
+@xf-cv6IndexTabBasic--border-bottom-right-radius: 0;
 @xf-cv6IndexTabBasic--padding: @xf-paddingSmall;
+@xf-cv6IndexTabHover--color: @xf-linkHoverColor;
+@xf-cv6IndexTabHover--text-decoration: none;
+@xf-cv6IndexTabHover--background-color: mix(@xf-contentHighlightBg, @xf-contentBg, 50%);
+@xf-cv6IndexTabNoResult--color: @xf-textColorMuted;
+@xf-cv6IndexTabNoResult--background-color: @xf-contentAltBg;

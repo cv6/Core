@@ -14,7 +14,6 @@
     "advanced": true,
     "default_value": "{\"fa-rotate-90\":true,\"fa-rotate-180\":true,\"fa-rotate-270\":true,\"fa-flip-vertical\":true,\"fa-flip-horizontal\":true}",
     "relations": {
-        "cv6Core": 120,
-        "debug": 3651
+        "cv6Core": 120
     }
 }

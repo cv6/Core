@@ -1,4 +1,70 @@
 {
+    "custom_bb_code_desc.book.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.book.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_output.book.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_title.book.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "615b42c3d595f622c45743f7bb38eb4d"
+    },
+    "cv6_active.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "4d3d769b812b6faa6b76e1a8abaece2d"
+    },
+    "cv6_active_hint.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "cv6_all_cv6_addons.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "75a0d21d01fa82dea2ddd14b8b40f86a"
+    },
+    "cv6_az.txt": {
+        "global_cache": false,
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "07e8096578033a82e68e57f2d0d288b7"
+    },
+    "cv6_copyright_base.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "9970388838f6cab853bb6bda4ae3cbc5"
+    },
+    "cv6_delete_selected.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "d3b206d196cd6be3a2764c1fb90b200f"
+    },
+    "cv6_description.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "b5a7adde1af5c87d7fd797b6245c2a39"
+    },
     "cv6_fa_animation.txt": {
         "global_cache": false,
         "version_id": 1000070,
@@ -107,17 +173,101 @@
         "version_string": "1.0.0",
         "hash": "e97036c615b0af6a79f0bc293cdb6442"
     },
+    "cv6_invalid_class.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "49dcb266603ea51919c2dd020e4a55f2"
+    },
+    "cv6_is_active.txt": {
+        "global_cache": false,
+        "version_id": 1020051,
+        "version_string": "1.2.0 Release Candidate 1",
+        "hash": "e4411398537249e5360d11a70b01ecbf"
+    },
     "cv6_letter_filter.txt": {
         "global_cache": false,
         "version_id": 1010051,
         "version_string": "1.1.0 Release Candidate 1",
         "hash": "13a4a02c365a44407beebb73dddbc554"
     },
+    "cv6_logo.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "8c2857a9ad1d8f31659e35e904e20fa6"
+    },
+    "cv6_no_style.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d0b7ad4f3f230828955baad752602514"
+    },
+    "cv6_please_enter_only_one_icon_class.txt": {
+        "global_cache": false,
+        "version_id": 1030031,
+        "version_string": "1.3.0 Beta 1",
+        "hash": "7c1531977bb3532ec25e2b05767964b5"
+    },
+    "cv6_please_enter_valid_icon_classes.txt": {
+        "global_cache": false,
+        "version_id": 1030031,
+        "version_string": "1.3.0 Beta 1",
+        "hash": "a973a5434a10dc5395aa7b8cb3dedb69"
+    },
+    "cv6_please_enter_valid_tag.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "424a6f9f65f63ad1fcb450df05af80a8"
+    },
+    "cv6_please_remove_unknown_icon_classes_x.txt": {
+        "global_cache": false,
+        "version_id": 1030031,
+        "version_string": "1.3.0 Beta 1",
+        "hash": "e9b6b644ea9bed3a0dbc58b861dd5ca8"
+    },
     "cv6_remove_filter.txt": {
         "global_cache": false,
         "version_id": 1000170,
         "version_string": "1.0.1",
         "hash": "481656bd7338a059d555ff8a623c855c"
+    },
+    "cv6_slug_must_be_unique.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "88527f107fe355b1518fd6fcebcf0e13"
+    },
+    "cv6_sort_abc.txt": {
+        "global_cache": false,
+        "version_id": 1020170,
+        "version_string": "1.2.1",
+        "hash": "9cb6d4aa439286915d68645ba8d56a8e"
+    },
+    "cv6_system_field_cannot_deleted.txt": {
+        "global_cache": false,
+        "version_id": 1020052,
+        "version_string": "1.2.0 Release Candidate 2",
+        "hash": "e1fd4e861ed58403d135b1fe1dfb5e6f"
+    },
+    "cv6_tag.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "c101058e7ea21bbbf2a5ac893088e90b"
+    },
+    "cv6_unknown_fa_icon.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "7cea106b792b1db6db53fddda36971b4"
+    },
+    "cv6_xf_core.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "3398480aa52f0abfc5523340f32916e9"
     },
     "option.cv6CoreFaAnimation.txt": {
         "global_cache": false,
@@ -157,21 +307,21 @@
     },
     "option.cv6MarkEmptyLetter.txt": {
         "global_cache": false,
-        "version_id": 1010050,
-        "version_string": "1.1.0 Release Candidate",
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
         "hash": "fb80ff71052127669969ec4a7e99460b"
-    },
-    "option.cv6MinimumContent.txt": {
-        "global_cache": false,
-        "version_id": 1010051,
-        "version_string": "1.1.0 Release Candidate 1",
-        "hash": "6ffa240ef94a8eb6f914fc8d318ef71e"
     },
     "option.cv6RemoveTab.txt": {
         "global_cache": false,
         "version_id": 1010070,
         "version_string": "1.1.0",
         "hash": "3d6af8ad7e8ccceece1d844b570e7cb6"
+    },
+    "option.cv6ReplaceXF.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "2b81389ec37399b30da54fd1ad297897"
     },
     "option.cv6ShowIconHelper.txt": {
         "global_cache": false,
@@ -190,6 +340,12 @@
         "version_id": 1010051,
         "version_string": "1.1.0 Release Candidate 1",
         "hash": "29b1a40f8550f43a26cd20fd8e2731b7"
+    },
+    "option.cv6extraFaIcons.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d1758444a6dfbc2f51f30e5069c0bbec"
     },
     "option_explain.cv6CoreFaAnimation.txt": {
         "global_cache": false,
@@ -229,15 +385,9 @@
     },
     "option_explain.cv6MarkEmptyLetter.txt": {
         "global_cache": false,
-        "version_id": 1010050,
-        "version_string": "1.1.0 Release Candidate",
-        "hash": "1b628ad6b4c788c2ebb8ca54e51af27b"
-    },
-    "option_explain.cv6MinimumContent.txt": {
-        "global_cache": false,
-        "version_id": 1010051,
-        "version_string": "1.1.0 Release Candidate 1",
-        "hash": "13071f33896b073dec9cee823d71dbd0"
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "56e79de3c4f4261c13768f5008b6d158"
     },
     "option_explain.cv6RemoveTab.txt": {
         "global_cache": false,
@@ -245,11 +395,17 @@
         "version_string": "1.1.0",
         "hash": "bc777290b3ca2d12907e4b4271b477cc"
     },
+    "option_explain.cv6ReplaceXF.txt": {
+        "global_cache": false,
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "753a89fac15037d1e281530e253ace29"
+    },
     "option_explain.cv6ShowIconHelper.txt": {
         "global_cache": false,
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "3fd63d4647b36eb196cf0012231b1956"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "33c2c13cffb77b83355b357d2d956278"
     },
     "option_explain.cv6ShowNumberTab.txt": {
         "global_cache": false,
@@ -263,6 +419,12 @@
         "version_string": "1.1.0 Release Candidate 1",
         "hash": "2dc85bdf9ff668728b0354fa0f497feb"
     },
+    "option_explain.cv6extraFaIcons.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "0afd48da890154e05fe00c5fa12ced65"
+    },
     "option_group.cv6Core.txt": {
         "global_cache": false,
         "version_id": 1000070,
@@ -271,9 +433,9 @@
     },
     "option_group.cv6LetterIndex.txt": {
         "global_cache": false,
-        "version_id": 1010051,
-        "version_string": "1.1.0 Release Candidate 1",
-        "hash": "be6b2405046508bd70acb05b15a096e1"
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "2de6362295de02b7b9cada4c791fb07b"
     },
     "option_group_description.cv6Core.txt": {
         "global_cache": false,
@@ -283,9 +445,15 @@
     },
     "option_group_description.cv6LetterIndex.txt": {
         "global_cache": false,
-        "version_id": 1010051,
-        "version_string": "1.1.0 Release Candidate 1",
-        "hash": "6419d8d2db15963199f6a076dba04292"
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "5fc6078aee0e64f092ce9d056bff4aed"
+    },
+    "style_prop.cv6IndexTabActive.txt": {
+        "global_cache": false,
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "c668258db520c6994222ea7556c24af0"
     },
     "style_prop.cv6IndexTabBasic.txt": {
         "global_cache": false,
@@ -293,17 +461,17 @@
         "version_string": "1.0.1",
         "hash": "0cbf55cd4fa859bb022dbebca1f5a38d"
     },
-    "style_prop.cv6IndexTabBgActive.txt": {
+    "style_prop.cv6IndexTabHover.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "548f0396f86122336b2da43d10ca4cf6"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "b56ba99fedb8ef2e1bc71741dd98e30b"
     },
-    "style_prop.cv6IndexTabBgNoResult.txt": {
+    "style_prop.cv6IndexTabNoResult.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "35ec03ab2335b1a48a8472a51c53d2ba"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "f32f799146d4b29541230baad88283ea"
     },
     "style_prop.cv6IndexTabSize.txt": {
         "global_cache": false,
@@ -311,23 +479,11 @@
         "version_string": "1.0.1",
         "hash": "db95b12b2514ab0500e626797e895fdc"
     },
-    "style_prop.cv6IndexTabTextActive.txt": {
+    "style_prop_desc.cv6IndexTabActive.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "ef8ef07b2e796400fc4465e39993b252"
-    },
-    "style_prop.cv6IndexTabTextHover.txt": {
-        "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "024e14d872ff78122e0fc5e118865d43"
-    },
-    "style_prop.cv6IndexTabTextNoResult.txt": {
-        "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "993c103d649d34c2f3efada746257ed7"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "style_prop_desc.cv6IndexTabBasic.txt": {
         "global_cache": false,
@@ -335,16 +491,16 @@
         "version_string": "1.0.1",
         "hash": "ee907ba034052d96786fae0e1275ee0c"
     },
-    "style_prop_desc.cv6IndexTabBgActive.txt": {
+    "style_prop_desc.cv6IndexTabHover.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
         "hash": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "style_prop_desc.cv6IndexTabBgNoResult.txt": {
+    "style_prop_desc.cv6IndexTabNoResult.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
         "hash": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "style_prop_desc.cv6IndexTabSize.txt": {
@@ -353,35 +509,17 @@
         "version_string": "1.0.1",
         "hash": "d41d8cd98f00b204e9800998ecf8427e"
     },
-    "style_prop_desc.cv6IndexTabTextActive.txt": {
-        "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "style_prop_desc.cv6IndexTabTextHover.txt": {
-        "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "d41d8cd98f00b204e9800998ecf8427e"
-    },
-    "style_prop_desc.cv6IndexTabTextNoResult.txt": {
-        "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "d41d8cd98f00b204e9800998ecf8427e"
-    },
     "style_prop_group.cv6Core.txt": {
         "global_cache": false,
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "8664ea1d8dd53e553c029bc160a4b8cd"
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "024d3be90ea2141a95a482761c5b9133"
     },
     "style_prop_group.cv6Indexable.txt": {
         "global_cache": false,
-        "version_id": 1000170,
-        "version_string": "1.0.1",
-        "hash": "36f4a0d2f7db033fc4a1d1c5eba115fc"
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "e68165abe127e09a4ff432c7eb054a9d"
     },
     "style_prop_group_desc.cv6Core.txt": {
         "global_cache": false,

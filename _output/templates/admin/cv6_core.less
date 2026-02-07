@@ -1,5 +1,5 @@
 .cv6-iconpreview {
-	width: 30px;
+	width: 30px !important;
 	.m-transition();
 	&:hover {
 		 transform: scale(1.8);
@@ -7,7 +7,13 @@
 }
 
 .cv6-loading {
-	color: @xf-textColorMuted;
+	width: 30px;
+	color: @xf-textColorFeature;
+}
+
+.cv6-error-icon {
+	width: 30px;
+	color: @xf-errorColor;
 }
 
 .tabPanes.cv6-tabPanes {
@@ -17,7 +23,7 @@
 			font-weight: 700;
 			&:after {
 				.m-faBase();
-				.m-faContent(@fa-var-check);
+				.m-faIcon(@fa-var-check);
 			}
 		}
 	}
@@ -37,4 +43,41 @@
 		.m-transition();
 		background-size: 0;
 	}
+}
+
+.cv6-preset-link {
+	width: 80px;
+	cursor: pointer;
+}
+
+.cv6-iconerror {
+	color: @xf-errorColor;
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.cv6-no-icon {
+	color: @xf-textColorMuted;
+}
+
+.cv6-icon-check {
+	&:before {
+		.m-faIcon(@fa-var-check);
+	}
+}
+.cv6-icon-no {
+	&:before {
+		.m-faIcon(@fa-var-do-not-enter);
+	}
+}
+.cv6-icon-todo {
+	&:before {
+		.m-faIcon(@fa-var-plus);
+	}
+}
+
+ul.listColumns.cv6-listColumns {
+	display: grid;
+	grid-template-columns: (repeat(2, 1fr));
 }

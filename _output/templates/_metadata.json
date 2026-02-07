@@ -4,20 +4,25 @@
         "version_string": "1.1.1 Release Candidate",
         "hash": "45bb381fec71b73a260ebab6aaec3218"
     },
+    "admin/cv6_admin_macros.html": {
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "91025e8ce1232150f9c07f62bfa631d0"
+    },
     "admin/cv6_assetupload.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "f6a128efe482c70d6c7d7ec6dacad596"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "e8f3747e9826db63918eb0a5fea331d8"
     },
     "admin/cv6_core.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "0cc62548b2bc7793cf60235c04e64256"
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "e468dccfd6dac7e47b26c26b083a74d0"
     },
     "admin/cv6_fa_icon.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "068eb30f041dea5d708dcfe89b739fd1"
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "cacf45c482b94116c582f9b94c9d7a6c"
     },
     "admin/cv6_messages.html": {
         "version_id": 1010150,
@@ -30,24 +35,39 @@
         "hash": "7d4b923fe50ce5fa4ee5ead805833a4d"
     },
     "admin/cv6_options_template_asset.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "9448b008926bd2ae94662a36cebef006"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "2d361825c1105fa62a497b8f67957324"
     },
     "admin/cv6_options_template_icon.html": {
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "9cc81b6de45badfc7a65dfe67ae0d72a"
+    },
+    "admin/cv6_style_fa_icon.html": {
         "version_id": 1000070,
         "version_string": "1.0.0",
-        "hash": "1aa24d96d7b12f70ce2efbd5349664af"
+        "hash": "1c4e42330f52045c78589d00f03b5d75"
     },
     "admin/cv6_style_template_icon.html": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "d80968be95d9fab49350cdaebe9904f9"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "3eeccc4a76b7d5b44c107cb4f30a483c"
+    },
+    "admin/cv6_style_var_template_icon.html": {
+        "version_id": 1020053,
+        "version_string": "1.2.0 Release Candidate 3",
+        "hash": "bc276447148478124c923cad301aa9e1"
+    },
+    "admin/option_template_cv6_node_select.html": {
+        "version_id": 1030031,
+        "version_string": "1.3.0 Beta 1",
+        "hash": "527a561062375ff39ffb06b52edcf249"
     },
     "public/cv6_fa.less": {
-        "version_id": 1000070,
-        "version_string": "1.0.0",
-        "hash": "96ba516a2a978980741f40c336f73c5e"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "8623a48b22abc635cfb6363a57c443f8"
     },
     "public/cv6_index_filter.html": {
         "version_id": 1000170,
@@ -55,13 +75,13 @@
         "hash": "aac893322387b7a9fc859d6cd6b2db0a"
     },
     "public/cv6_letterindex.html": {
-        "version_id": 1010070,
-        "version_string": "1.1.0",
-        "hash": "5cea4c0e4829b070f1c405c1f96a18b9"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "93abba23618365b2fa7cf99e3dfcfeca"
     },
     "public/cv6_letterindex.less": {
-        "version_id": 1010070,
-        "version_string": "1.1.0",
-        "hash": "6bc38c9528d1fab6e71848f50693aee2"
+        "version_id": 1020031,
+        "version_string": "1.2.0 Beta 1",
+        "hash": "da9b577fb3c1ad1d6ec36d514343c1c5"
     }
 }
